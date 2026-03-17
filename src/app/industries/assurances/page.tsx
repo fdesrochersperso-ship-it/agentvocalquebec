@@ -1,0 +1,93 @@
+import { IndustryPageTemplate } from "@/components/sections/industry-page-template";
+
+export const metadata = {
+  title:
+    "Agent téléphonique IA pour courtiers en assurance | Réceptionniste IA assurances | Agent Vocal Québec",
+  description:
+    "Agent téléphonique IA pour courtiers et cabinets d'assurance au Québec. Soumissions, réclamations, renouvellements automatisés.",
+};
+
+const PAGE_PROPS = {
+  badge: "Assurances",
+  title: "L'agent vocal IA pour les courtiers et cabinets d'assurance",
+  subtitle:
+    "Demandes de soumissions, réclamations, renouvellements — votre agent qualifie et dirige chaque appel.",
+  stats: [
+    { value: "70%", label: "des appels automatisés" },
+    { value: "45%", label: "traitement plus rapide" },
+  ],
+  painPoints: [
+    {
+      icon: "PhoneMissed",
+      title: "Les lignes débordent",
+      description:
+        "Sinistres, renouvellements, demandes de soumission — votre équipe n'arrive plus à tout gérer.",
+    },
+    {
+      icon: "Clock",
+      title: "Qualification manuelle = temps perdu",
+      description:
+        "Trop de temps passé à trier les appels avant de les diriger au bon courtier.",
+    },
+  ],
+  useCases: [
+    {
+      icon: "ClipboardList",
+      title: "Demandes de soumissions",
+      description:
+        "L'agent collecte les infos de base et qualifie le prospect avant de le transférer.",
+    },
+    {
+      icon: "AlertTriangle",
+      title: "Déclarations de sinistres",
+      description:
+        "Recueille les détails du sinistre, le numéro de police et dirige vers le bon dossier.",
+    },
+    {
+      icon: "RotateCcw",
+      title: "Renouvellements de polices",
+      description:
+        "Rappels automatiques avant échéance, prise de rendez-vous pour renouvellement.",
+    },
+    {
+      icon: "Filter",
+      title: "Qualification de prospects",
+      description:
+        "Pose les bonnes questions et dirige chaque appel vers le bon courtier ou service.",
+    },
+  ],
+  integrations: ["Epic", "Applied", "Google Calendar", "Outlook", "HubSpot"],
+  faq: [
+    {
+      question: "Est-ce que l'agent respecte la confidentialité des dossiers?",
+      answer:
+        "Oui. L'agent ne partage jamais de détails sensibles. Il collecte et qualifie, puis transfère à votre équipe. Données hébergées au Canada, conformes à la Loi 25.",
+    },
+    {
+      question: "Peut-il gérer les urgences sinistres?",
+      answer:
+        "Oui. Vous définissez les critères d'urgence. L'agent priorise et transfère immédiatement les cas critiques.",
+    },
+  ],
+};
+
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Agent vocal IA pour courtiers en assurance",
+  provider: { "@type": "Organization", name: "Agent Vocal Québec" },
+  areaServed: { "@type": "Place", name: "Québec, Canada" },
+  serviceType: "Agent téléphonique IA",
+};
+
+export default function AssurancesPage() {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+      />
+      <IndustryPageTemplate {...PAGE_PROPS} />
+    </>
+  );
+}
