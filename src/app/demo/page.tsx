@@ -3,16 +3,16 @@ import { PageHero } from "@/components/sections/page-hero";
 import { DemoForm } from "@/components/sections/demo-form";
 
 export const metadata: Metadata = {
-  title: "Réserver une démo",
+  title: "Démo gratuite",
   description:
-    "Réservez votre démo gratuite de 15 minutes. On vous fait entendre la voix, on vous montre le tableau de bord, et on répond à toutes vos questions.",
+    "Obtenez une démo gratuite de 15 minutes : voix québécoise, tableau de bord et réponses à vos questions. Sans engagement. On vous rappelle sous 24 h.",
 };
 
 export default function DemoPage() {
   return (
     <PageHero
-      title="Réservez votre démo gratuite"
-      subtitle="15 minutes. On vous fait entendre la voix, on vous montre le tableau de bord, et on répond à toutes vos questions. Aucun engagement."
+      title="Obtenez votre démo gratuite en 15 minutes"
+      subtitle="Dites-nous qui vous êtes — on vous rappelle pour calendrier une courte séance: voix québécoise, tableau de bord et réponses à vos questions. Sans engagement, sans carte de crédit."
       className="pt-8 pb-16 lg:pt-12 lg:pb-20"
     >
       <div className="mt-8 lg:mt-10">
