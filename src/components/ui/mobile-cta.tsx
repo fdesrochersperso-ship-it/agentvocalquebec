@@ -29,7 +29,7 @@ export function MobileCTA() {
       }`}
       style={{ minHeight: "44px" }}
     >
-      Réserver une démo
+      Obtenir ma démo gratuite
     </Link>
   );
 }

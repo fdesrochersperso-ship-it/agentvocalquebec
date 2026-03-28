@@ -63,7 +63,7 @@ export function DemoForm() {
       if (!res.ok) {
         if (res.status === 503) {
           setError(
-            "Le formulaire est temporairement indisponible. Réessayez plus tard ou écrivez-nous directement."
+            "Le formulaire est temporairement indisponible. Réessayez plus tard ou écrivez-nous à info@agentvocalquebec.com — on vous répond sous 24 h."
           );
         } else {
           setError(

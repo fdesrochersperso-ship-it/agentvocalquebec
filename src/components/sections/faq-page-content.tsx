@@ -70,32 +70,32 @@ const FAQ_CATEGORIES: FaqCategory[] = [
     ],
   },
   {
-    title: "Tarifs & facturation",
+    title: "Engagement & facturation",
     items: [
       {
-        question: "Y a-tu des frais de setup?",
+        question: "Y a-tu des frais de mise en service?",
         answer:
-          "Non. La configuration est incluse dans tous les plans.",
+          "Non. La configuration initiale est incluse — on vous accompagne pour être opérationnel sans frais de démarrage cachés.",
       },
       {
         question: "Je suis engagé pour combien de temps?",
         answer:
-          "Aucun engagement. Mois par mois. Annulez quand vous voulez.",
+          "Aucun engagement long terme. Vous discutez des modalités avec nous lors de la démo; en général c'est flexible, mois par mois, selon votre situation.",
       },
       {
-        question: "C'est quoi une minute?",
+        question: "C'est quoi une minute d'appel?",
         answer:
-          "Une minute d'appel. Du moment où l'agent décroche jusqu'à la fin. Les silences courts comptent, pas le temps de sonnerie.",
+          "Une minute d'appel, c'est du moment où l'agent décroche jusqu'à la fin de la conversation. Les silences courts comptent, pas le temps de sonnerie.",
       },
       {
-        question: "Qu'est-ce qui arrive si je dépasse mes minutes?",
+        question: "Comment ça fonctionne si mon volume d'appels augmente?",
         answer:
-          "Les minutes supplémentaires sont facturées au tarif de votre plan. Pas de surprise — suivez votre consommation en temps réel.",
+          "Les modalités (forfait, utilisation, facturation) vous sont présentées clairement lors de la démo et dans votre entente. Vous voyez l'usage en temps réel dans le tableau de bord — pas de mauvaise surprise.",
       },
       {
-        question: "Est-ce que je peux changer de plan?",
+        question: "Est-ce qu'on peut ajuster l'offre plus tard?",
         answer:
-          "Oui, à tout moment. Le changement prend effet au prochain cycle de facturation.",
+          "Oui. On adapte souvent la solution quand votre volume ou vos besoins changent. On en parle lors de votre démo ou avec votre contact chez Agent Vocal Québec.",
       },
     ],
   },

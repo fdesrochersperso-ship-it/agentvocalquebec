@@ -61,7 +61,7 @@ const PAGE_PROPS = {
     {
       question: "J'ai une petite équipe, est-ce que ça vaut la peine?",
       answer:
-        "Oui. Chaque appel manqué, c'est un contrat potentiel perdu. À partir de 99$/mois, si une seule soumission se transforme en client, c'est rentabilisé.",
+        "Oui. Chaque appel manqué, c'est souvent un contrat ou une soumission qui file chez un concurrent. Une courte démo suffit pour voir si l'agent rentabilise l'investissement pour votre équipe.",
     },
     {
       question: "Est-ce que l'agent peut prendre les infos pour une soumission?",

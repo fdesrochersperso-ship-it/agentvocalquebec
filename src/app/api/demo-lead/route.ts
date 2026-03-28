@@ -14,20 +14,71 @@ function formatPayloadForEmail(payload: Record<string, unknown>): string {
   return JSON.stringify(payload, null, 2);
 }
 
-export async function POST(request: Request) {
+function isResendConfigured(): boolean {
+  return !!(process.env.RESEND_API_KEY && process.env.DEMO_EMAIL_FROM);
+}
+
+function getWebhookUrl(): string | undefined {
+  const url = process.env.DEMO_LEAD_WEBHOOK_URL?.trim();
+  return url || undefined;
+}
+
+async function sendViaResend(payload: Record<string, unknown>, replyTo: string): Promise<boolean> {
   const secret = process.env.RESEND_API_KEY;
   const from = getFromAddress();
+  if (!secret || !from) return false;
 
-  if (!secret || !from) {
-    console.error(
-      "demo-lead: missing RESEND_API_KEY or DEMO_EMAIL_FROM — configure in env"
-    );
-    return NextResponse.json(
-      { ok: false, error: "configuration_serveur" },
-      { status: 503 }
-    );
+  const to = getNotifyTo();
+  const form = payload.form as { company?: string; name?: string };
+  const subject = `Demande de démo — ${form.company} (${form.name})`;
+  const text = formatPayloadForEmail(payload);
+
+  const res = await fetch(RESEND_API_URL, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${secret}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from,
+      to: [to],
+      reply_to: replyTo,
+      subject,
+      text,
+    }),
+  });
+
+  if (!res.ok) {
+    const errText = await res.text().catch(() => "");
+    console.error("Resend error:", res.status, errText);
+    return false;
   }
+  return true;
+}
 
+async function sendViaWebhook(
+  url: string,
+  payload: Record<string, unknown>
+): Promise<boolean> {
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      const errText = await res.text().catch(() => "");
+      console.error("DEMO_LEAD_WEBHOOK_URL error:", res.status, errText);
+      return false;
+    }
+    return true;
+  } catch (e) {
+    console.error("DEMO_LEAD_WEBHOOK_URL fetch failed:", e);
+    return false;
+  }
+}
+
+export async function POST(request: Request) {
   let body: unknown;
   try {
     body = await request.json();
@@ -64,6 +115,19 @@ export async function POST(request: Request) {
     });
   }
 
+  const resendReady = isResendConfigured();
+  const webhookUrl = getWebhookUrl();
+
+  if (!resendReady && !webhookUrl) {
+    console.error(
+      "demo-lead: configure RESEND_API_KEY + DEMO_EMAIL_FROM and/or DEMO_LEAD_WEBHOOK_URL"
+    );
+    return NextResponse.json(
+      { ok: false, error: "configuration_serveur" },
+      { status: 503 }
+    );
+  }
+
   const context =
     b.context && typeof b.context === "object" && !Array.isArray(b.context)
       ? (b.context as Record<string, unknown>)
@@ -91,32 +155,22 @@ export async function POST(request: Request) {
     server: serverMeta,
   };
 
-  const to = getNotifyTo();
-  const subject = `Demande de démo — ${company} (${name})`;
-  const text = formatPayloadForEmail(payload);
+  let resendOk = false;
+  let webhookOk = false;
 
-  const res = await fetch(RESEND_API_URL, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${secret}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      from,
-      to: [to],
-      reply_to: email,
-      subject,
-      text,
-    }),
-  });
-
-  if (!res.ok) {
-    const errText = await res.text().catch(() => "");
-    console.error("Resend error:", res.status, errText);
-    return NextResponse.json({ ok: false, error: "envoi_echec" }, {
-      status: 502,
-    });
+  if (resendReady) {
+    resendOk = await sendViaResend(payload, email);
   }
 
-  return NextResponse.json({ ok: true });
+  if (webhookUrl) {
+    webhookOk = await sendViaWebhook(webhookUrl, payload);
+  }
+
+  if (resendOk || webhookOk) {
+    return NextResponse.json({ ok: true });
+  }
+
+  return NextResponse.json({ ok: false, error: "envoi_echec" }, {
+    status: 502,
+  });
 }

@@ -15,6 +15,16 @@ export default function DemoPage() {
       subtitle="Dites-nous qui vous êtes — on vous rappelle pour calendrier une courte séance: voix québécoise, tableau de bord et réponses à vos questions. Sans engagement, sans carte de crédit."
       className="pt-8 pb-16 lg:pt-12 lg:pb-20"
     >
+      <p className="mt-6 max-w-[600px] text-center text-[0.9375rem] leading-relaxed text-text-secondary mx-auto lg:mt-8">
+        Préférez qu&apos;on vous rappelle sans remplir le formulaire? Écrivez-nous à{" "}
+        <a
+          href="mailto:info@agentvocalquebec.com"
+          className="font-medium text-accent underline-offset-2 hover:underline"
+        >
+          info@agentvocalquebec.com
+        </a>{" "}
+        — même délai de réponse.
+      </p>
       <div className="mt-8 lg:mt-10">
         <DemoForm />
       </div>

@@ -15,7 +15,7 @@ const INDUSTRIES_LINKS = [
 ] as const;
 
 const DESKTOP_NAV_LINKS = [
-  { href: "/tarifs", label: "Tarifs" },
+  { href: "/demo", label: "Obtenir un rappel" },
   { href: "/faq", label: "FAQ" },
 ] as const;
 
@@ -250,11 +250,11 @@ export function Header() {
                 </div>
 
                 <Link
-                  href="/tarifs"
+                  href="/demo"
                   onClick={closeMobileMenu}
                   className="flex min-h-[44px] items-center border-t border-border px-6 py-3 text-base font-medium text-primary hover:bg-primary/5"
                 >
-                  Tarifs
+                  Obtenir un rappel
                 </Link>
                 <Link
                   href="/faq"

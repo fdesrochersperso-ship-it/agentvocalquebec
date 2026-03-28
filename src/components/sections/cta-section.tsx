@@ -14,8 +14,8 @@ export interface CtaSectionProps {
 const DEFAULT_PROPS = {
   title: "Prêt à ne plus manquer un seul appel?",
   subtitle:
-    "Réservez une démo de 15 minutes. On vous montre comment ça sonne.",
-  ctaText: "Réserver ma démo gratuite",
+    "Réservez une démo de 15 minutes. On vous rappelle sous 24 h ouvrables — voix québécoise, tableau de bord, vos questions.",
+  ctaText: "Obtenir ma démo gratuite",
   ctaHref: "/demo",
   disclaimer: "Aucun engagement. Aucune carte de crédit.",
 } as const;
@@ -47,6 +47,15 @@ export function CtaSection({
           </Button>
           <p className="text-[0.875rem] leading-[1.4] text-text-inverse/70">
             {disclaimer}
+          </p>
+          <p className="text-[0.875rem] leading-[1.5] text-text-inverse/80">
+            Vous préférez écrire?{" "}
+            <a
+              href="mailto:info@agentvocalquebec.com"
+              className="underline underline-offset-2 hover:text-text-inverse"
+            >
+              info@agentvocalquebec.com
+            </a>
           </p>
         </AnimateOnScroll>
       </div>

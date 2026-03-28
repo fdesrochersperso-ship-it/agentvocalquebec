@@ -91,7 +91,7 @@ const PAGE_PROPS = {
     {
       question: "J'ai 5 appels par jour max, est-ce que ça vaut la peine?",
       answer:
-        "À 149$/mois, si un seul appel se transforme en contrat grâce à l'agent, c'est rentabilisé. Et vous ne savez pas combien d'appels vous manquez.",
+        "Oui. Un seul contrat de plus gagné grâce à un appel bien pris peut changer la donne — et vous ne mesurez souvent pas combien d'appels vous manquez aujourd'hui. Réservez une courte démo pour voir si ça vaut la peine dans votre cas.",
     },
     {
       question: "Est-ce que l'agent peut dispatcher les urgences la nuit?",

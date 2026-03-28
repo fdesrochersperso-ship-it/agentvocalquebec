@@ -7,9 +7,8 @@ const NAV_LINKS = [
   { href: "/", label: "Accueil" },
   { href: "/industries", label: "Industries" },
   { href: "/fonctionnalites", label: "Fonctionnalités" },
-  { href: "/tarifs", label: "Tarifs" },
+  { href: "/demo", label: "Obtenir un rappel" },
   { href: "/faq", label: "FAQ" },
-  { href: "/demo", label: "Réserver une démo" },
 ] as const;
 
 const LEGAL_LINKS = [
