@@ -120,7 +120,12 @@ export async function POST(request: Request) {
 
   if (!resendReady && !webhookUrl) {
     console.error(
-      "demo-lead: configure RESEND_API_KEY + DEMO_EMAIL_FROM and/or DEMO_LEAD_WEBHOOK_URL"
+      "demo-lead: 503 no_delivery_channel — set RESEND_API_KEY+DEMO_EMAIL_FROM and/or DEMO_LEAD_WEBHOOK_URL (Vercel Production + redeploy)",
+      {
+        hasResendApiKey: !!process.env.RESEND_API_KEY,
+        hasDemoEmailFrom: !!process.env.DEMO_EMAIL_FROM,
+        hasWebhookEnv: !!process.env.DEMO_LEAD_WEBHOOK_URL?.trim(),
+      }
     );
     return NextResponse.json(
       { ok: false, error: "configuration_serveur" },
@@ -169,6 +174,13 @@ export async function POST(request: Request) {
   if (resendOk || webhookOk) {
     return NextResponse.json({ ok: true });
   }
+
+  console.error("demo-lead: 502 all_channels_failed", {
+    resendAttempted: resendReady,
+    resendOk,
+    webhookAttempted: !!webhookUrl,
+    webhookOk,
+  });
 
   return NextResponse.json({ ok: false, error: "envoi_echec" }, {
     status: 502,
