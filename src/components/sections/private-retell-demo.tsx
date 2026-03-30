@@ -26,6 +26,22 @@ interface TranscriptLine {
   text: string;
 }
 
+const INDUSTRY_OPTIONS = [
+  "Clinique dentaire",
+  "Médico-esthétique",
+  "Construction",
+  "Services professionnels",
+  "Immobilier",
+  "Hôtellerie",
+] as const;
+
+const FOCUS_OPTIONS = [
+  "prise de rendez-vous",
+  "qualification",
+  "retour d'appel",
+  "urgence légère",
+] as const;
+
 const DEFAULT_TRANSCRIPT: TranscriptLine[] = [
   {
     speaker: "client",
@@ -78,10 +94,6 @@ function getErrorMessage(upstreamStatus?: number): string {
 export function PrivateRetellDemo() {
   const clientRef = useRef<RetellWebClient | null>(null);
   const endModeRef = useRef<EndMode>("ended");
-  const businessName = "Clinique Villeray";
-  const industry = "Clinique dentaire";
-  const city = "Montréal";
-  const offerFocus = "prise de rendez-vous";
 
   const [sdkReady, setSdkReady] = useState(false);
   const [status, setStatus] = useState<DemoStatus>("idle");
@@ -89,6 +101,17 @@ export function PrivateRetellDemo() {
   const [error, setError] = useState<string | null>(null);
   const [agentSpeaking, setAgentSpeaking] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  const [businessName, setBusinessName] = useState("Clinique Villeray");
+  const [industry, setIndustry] = useState<(typeof INDUSTRY_OPTIONS)[number]>(
+    "Clinique dentaire"
+  );
+  const [city, setCity] = useState("Montréal");
+  const [offerFocus, setOfferFocus] = useState<(typeof FOCUS_OPTIONS)[number]>(
+    "prise de rendez-vous"
+  );
+  const [promptToTry, setPromptToTry] = useState(
+    "Bonjour, j'appelle pour voir si vous prenez encore des nouveaux clients."
+  );
   const [transcriptLines, setTranscriptLines] =
     useState<TranscriptLine[]>(DEFAULT_TRANSCRIPT);
 
@@ -237,7 +260,101 @@ export function PrivateRetellDemo() {
   const muteDisabled = status !== "live";
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[minmax(0,1.18fr)_minmax(0,0.82fr)]">
+    <div className="grid gap-6 xl:grid-cols-[minmax(340px,0.86fr)_minmax(0,1.14fr)]">
+      <Card className="xl:col-span-2 min-w-0 overflow-hidden border-border-strong bg-white/92 p-7 backdrop-blur-sm">
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-accent">
+              Adaptez la démonstration
+            </p>
+            <h2 className="mt-3 font-display text-[2rem] leading-tight text-primary">
+              Personnalisez l&apos;entreprise et la demande en quelques secondes.
+            </h2>
+          </div>
+          <div className="rounded-full border border-border bg-background px-4 py-2 text-sm text-text-secondary">
+            La voix et le scénario se mettent à jour au prochain appel.
+          </div>
+        </div>
+
+        <div className="mt-6 grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.8fr)_minmax(0,0.9fr)]">
+          <label className="min-w-0">
+            <span className="mb-2 flex items-center gap-2 text-sm uppercase tracking-[0.18em] text-text-muted">
+              <Building2 className="h-4 w-4 text-accent" aria-hidden />
+              Entreprise
+            </span>
+            <input
+              value={businessName}
+              onChange={(event) => setBusinessName(event.target.value)}
+              className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-[1rem] text-primary outline-none transition-colors focus:border-accent"
+            />
+          </label>
+
+          <label className="min-w-0">
+            <span className="mb-2 flex items-center gap-2 text-sm uppercase tracking-[0.18em] text-text-muted">
+              <MapPin className="h-4 w-4 text-accent" aria-hidden />
+              Ville
+            </span>
+            <input
+              value={city}
+              onChange={(event) => setCity(event.target.value)}
+              className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-[1rem] text-primary outline-none transition-colors focus:border-accent"
+            />
+          </label>
+
+          <label className="min-w-0">
+            <span className="mb-2 text-sm uppercase tracking-[0.18em] text-text-muted">
+              Secteur
+            </span>
+            <select
+              value={industry}
+              onChange={(event) =>
+                setIndustry(event.target.value as (typeof INDUSTRY_OPTIONS)[number])
+              }
+              className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-[1rem] text-primary outline-none transition-colors focus:border-accent"
+            >
+              {INDUSTRY_OPTIONS.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+
+        <div className="mt-4 grid gap-4 lg:grid-cols-[minmax(240px,0.42fr)_minmax(0,1fr)]">
+          <label className="min-w-0">
+            <span className="mb-2 text-sm uppercase tracking-[0.18em] text-text-muted">
+              Type de demande
+            </span>
+            <select
+              value={offerFocus}
+              onChange={(event) =>
+                setOfferFocus(event.target.value as (typeof FOCUS_OPTIONS)[number])
+              }
+              className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-[1rem] text-primary outline-none transition-colors focus:border-accent"
+            >
+              {FOCUS_OPTIONS.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </label>
+
+          <label className="min-w-0">
+            <span className="mb-2 text-sm uppercase tracking-[0.18em] text-text-muted">
+              Demande à tester
+            </span>
+            <textarea
+              value={promptToTry}
+              onChange={(event) => setPromptToTry(event.target.value)}
+              rows={2}
+              className="w-full rounded-2xl border border-border bg-background px-4 py-3 text-[1rem] leading-7 text-primary outline-none transition-colors focus:border-accent"
+            />
+          </label>
+        </div>
+      </Card>
+
       <Card className="min-w-0 overflow-hidden border-border-strong bg-white/92 p-0 backdrop-blur-sm">
         <div className="border-b border-border px-6 py-5 sm:px-7">
           <div className="flex flex-wrap items-center justify-between gap-4">
@@ -263,31 +380,8 @@ export function PrivateRetellDemo() {
           </div>
         </div>
 
-        <div className="grid gap-7 px-6 py-6 sm:px-7 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
-          <div className="min-w-0 space-y-5">
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="min-w-0 overflow-hidden rounded-[24px] border border-border bg-background px-5 py-5">
-                <p className="flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-text-muted">
-                  <Building2 className="h-4 w-4 text-accent" aria-hidden />
-                  Entreprise en démonstration
-                </p>
-                <p className="mt-3 text-[1.65rem] font-semibold leading-tight text-primary sm:text-[1.9rem]">
-                  {businessName}
-                </p>
-              </div>
-
-              <div className="min-w-0 overflow-hidden rounded-[24px] border border-border bg-background px-5 py-5">
-                <p className="flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-text-muted">
-                  <MapPin className="h-4 w-4 text-accent" aria-hidden />
-                  Présence
-                </p>
-                <p className="mt-3 text-[1.25rem] font-semibold leading-tight text-primary sm:text-[1.45rem]">
-                  <span className="block">{city}</span>
-                  <span className="mt-1 block">{industry}</span>
-                </p>
-              </div>
-            </div>
-
+        <div className="px-6 py-6 sm:px-7">
+          <div className="min-w-0">
             <div className="min-w-0 overflow-hidden rounded-[28px] border border-border bg-primary px-6 py-6 text-text-inverse">
               <div className="flex items-center justify-between gap-4">
                 <div>
@@ -377,55 +471,53 @@ export function PrivateRetellDemo() {
               )}
             </div>
           </div>
-
-          <div className="min-w-0 space-y-4">
-            <div className="min-w-0 overflow-hidden rounded-[28px] border border-border bg-background px-5 py-5">
-              <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent/12 text-accent">
-                  <Sparkles className="h-5 w-5" aria-hidden />
-                </div>
-                <div className="min-w-0">
-                  <p className="text-sm uppercase tracking-[0.2em] text-text-muted">
-                    Essayez de demander
-                  </p>
-                  <p className="mt-1 break-words text-[0.97rem] font-medium leading-7 text-primary sm:text-base">
-                    &ldquo;Bonjour, j&apos;appelle pour voir si vous prenez encore des nouveaux clients.&rdquo;
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="min-w-0 overflow-hidden rounded-[28px] border border-border bg-background px-5 py-5">
-              <p className="text-sm uppercase tracking-[0.2em] text-text-muted">
-                Transcription en direct
-              </p>
-              <div className="mt-4 space-y-3">
-                {transcriptLines.map((item, index) => (
-                  <div
-                    key={`${item.speaker}-${index}-${item.text}`}
-                    className={`max-w-[92%] rounded-2xl px-4 py-3 ${
-                      item.speaker === "client"
-                        ? "bg-white text-primary"
-                        : "ml-auto bg-accent text-white"
-                    }`}
-                  >
-                    <p
-                      className={`text-[11px] uppercase tracking-[0.18em] ${
-                        item.speaker === "client" ? "text-text-muted" : "text-white/75"
-                      }`}
-                    >
-                      {item.speaker === "client" ? "Client" : "Agent"}
-                    </p>
-                    <p className="mt-1 text-[0.98rem] leading-7">{item.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
         </div>
       </Card>
 
       <div className="min-w-0 grid gap-6">
+        <Card className="min-w-0 overflow-hidden border-border-strong bg-white/92 p-7 backdrop-blur-sm">
+          <div className="flex items-start gap-3">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent/12 text-accent">
+              <Sparkles className="h-5 w-5" aria-hidden />
+            </div>
+            <div className="min-w-0">
+              <p className="text-sm uppercase tracking-[0.2em] text-text-muted">
+                Essayez de demander
+              </p>
+              <p className="mt-2 break-words text-[1rem] leading-7 text-primary">
+                &ldquo;{promptToTry}&rdquo;
+              </p>
+            </div>
+          </div>
+        </Card>
+
+        <Card className="min-w-0 overflow-hidden border-border-strong bg-white/92 p-7 backdrop-blur-sm">
+          <p className="text-sm uppercase tracking-[0.2em] text-text-muted">
+            Transcription en direct
+          </p>
+          <div className="mt-4 space-y-3">
+            {transcriptLines.map((item, index) => (
+              <div
+                key={`${item.speaker}-${index}-${item.text}`}
+                className={`max-w-[92%] rounded-2xl px-4 py-3 ${
+                  item.speaker === "client"
+                    ? "bg-background text-primary"
+                    : "ml-auto bg-accent text-white"
+                }`}
+              >
+                <p
+                  className={`text-[11px] uppercase tracking-[0.18em] ${
+                    item.speaker === "client" ? "text-text-muted" : "text-white/75"
+                  }`}
+                >
+                  {item.speaker === "client" ? "Client" : "Agent"}
+                </p>
+                <p className="mt-1 text-[0.98rem] leading-7">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </Card>
+
         <Card className="min-w-0 overflow-hidden border-border-strong bg-white/92 p-7 backdrop-blur-sm">
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-accent">
             Ce que l&apos;agent fait pour vous
