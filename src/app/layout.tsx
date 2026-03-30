@@ -4,9 +4,7 @@ import {
   Source_Sans_3,
   JetBrains_Mono,
 } from "next/font/google";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
-import { MobileCTA } from "@/components/ui/mobile-cta";
+import { SiteChrome } from "@/components/layout/site-chrome";
 import "./globals.css";
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -52,10 +50,7 @@ export default function RootLayout({
       className={`${dmSerifDisplay.variable} ${sourceSans3.variable} ${jetbrainsMono.variable}`}
     >
       <body className="bg-background antialiased font-body pb-20 md:pb-0">
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <MobileCTA />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
