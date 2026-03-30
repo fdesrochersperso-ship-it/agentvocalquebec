@@ -163,7 +163,7 @@ export function IndustryPageTemplate({
               </p>
             </AnimateOnScroll>
             <AnimateOnScroll delay={0.3}>
-              <Button href="/demo" variant="primary" size="lg">
+              <Button href="/demo-gratuite" variant="primary" size="lg">
                 Réserver une démo
               </Button>
             </AnimateOnScroll>
@@ -332,7 +332,7 @@ export function IndustryPageTemplate({
                 {calculatorConfig.label}
               </p>
               <Button
-                href="/demo"
+                href="/demo-gratuite"
                 variant="tertiary"
                 size="default"
                 className="group w-fit"

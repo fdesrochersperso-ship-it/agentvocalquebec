@@ -15,7 +15,7 @@ const INDUSTRIES_LINKS = [
 ] as const;
 
 const DESKTOP_NAV_LINKS = [
-  { href: "/demo", label: "Obtenir un rappel" },
+  { href: "/demo-gratuite", label: "Obtenir un rappel" },
   { href: "/faq", label: "FAQ" },
 ] as const;
 
@@ -167,7 +167,7 @@ export function Header() {
 
         {/* CTA button - always visible, right side */}
         <div className="flex shrink-0 order-3">
-          <Button href="/demo" variant="primary" size="default">
+          <Button href="/demo-gratuite" variant="primary" size="default">
             Réserver une démo
           </Button>
         </div>
@@ -250,7 +250,7 @@ export function Header() {
                 </div>
 
                 <Link
-                  href="/demo"
+                  href="/demo-gratuite"
                   onClick={closeMobileMenu}
                   className="flex min-h-[44px] items-center border-t border-border px-6 py-3 text-base font-medium text-primary hover:bg-primary/5"
                 >

@@ -116,7 +116,7 @@ export function IndustriesPreview() {
             <p className="font-body text-[1rem] leading-[1.5] text-text-secondary">
               Votre industrie n'est pas listée?{" "}
               <Button
-                href="/demo"
+                href="/demo-gratuite"
                 variant="tertiary"
                 size="default"
                 className="inline-flex p-0 h-auto font-semibold"

@@ -246,7 +246,7 @@ export function IndustriesHubPage() {
             Notre agent vocal peut être adapté pour n'importe quelle entreprise
             de services. Contactez-nous pour discuter de votre cas.
           </p>
-          <Button href="/demo" variant="primary" size="lg">
+          <Button href="/demo-gratuite" variant="primary" size="lg">
             Contactez-nous
           </Button>
         </AnimateOnScroll>

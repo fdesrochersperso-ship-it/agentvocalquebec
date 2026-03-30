@@ -178,7 +178,7 @@ export function FaqPageContent() {
           <p className="text-[1.125rem] leading-[1.6] text-text-secondary">
             Contactez-nous.
           </p>
-          <Button href="/demo" variant="primary" size="lg">
+          <Button href="/demo-gratuite" variant="primary" size="lg">
             Réserver une démo
           </Button>
         </AnimateOnScroll>

@@ -31,7 +31,7 @@ export function ConstructionHero() {
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.3}>
-            <Button href="/demo" variant="primary" size="lg">
+            <Button href="/demo-gratuite" variant="primary" size="lg">
               Réserver une démo
             </Button>
           </AnimateOnScroll>

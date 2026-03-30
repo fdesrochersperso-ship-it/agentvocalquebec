@@ -30,7 +30,7 @@ export function HeroSection() {
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.3}>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Button href="/demo" variant="primary" size="lg">
+              <Button href="/demo-gratuite" variant="primary" size="lg">
                 Réserver une démo gratuite
               </Button>
               <Button href="/#comment-ca-marche" variant="secondary" size="lg">

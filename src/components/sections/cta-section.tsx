@@ -16,7 +16,7 @@ const DEFAULT_PROPS = {
   subtitle:
     "Réservez une démo de 15 minutes. On vous rappelle sous 24 h ouvrables — voix québécoise, tableau de bord, vos questions.",
   ctaText: "Obtenir ma démo gratuite",
-  ctaHref: "/demo",
+  ctaHref: "/demo-gratuite",
   disclaimer: "Aucun engagement. Aucune carte de crédit.",
 } as const;
 
