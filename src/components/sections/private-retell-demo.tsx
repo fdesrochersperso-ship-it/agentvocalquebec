@@ -237,8 +237,8 @@ export function PrivateRetellDemo() {
   const muteDisabled = status !== "live";
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[1.18fr_0.82fr]">
-      <Card className="border-border-strong bg-white/92 p-0 backdrop-blur-sm">
+    <div className="grid gap-6 lg:grid-cols-[minmax(0,1.18fr)_minmax(0,0.82fr)]">
+      <Card className="min-w-0 overflow-hidden border-border-strong bg-white/92 p-0 backdrop-blur-sm">
         <div className="border-b border-border px-6 py-5 sm:px-7">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
@@ -263,29 +263,32 @@ export function PrivateRetellDemo() {
           </div>
         </div>
 
-        <div className="grid gap-7 px-6 py-6 sm:px-7 lg:grid-cols-[0.92fr_1.08fr]">
-          <div className="space-y-5">
+        <div className="grid gap-7 px-6 py-6 sm:px-7 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
+          <div className="min-w-0 space-y-5">
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-[24px] border border-border bg-background px-5 py-5">
+              <div className="min-w-0 overflow-hidden rounded-[24px] border border-border bg-background px-5 py-5">
                 <p className="flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-text-muted">
                   <Building2 className="h-4 w-4 text-accent" aria-hidden />
                   Entreprise en démonstration
                 </p>
-                <p className="mt-3 text-xl font-semibold text-primary">{businessName}</p>
+                <p className="mt-3 text-[1.65rem] font-semibold leading-tight text-primary sm:text-[1.9rem]">
+                  {businessName}
+                </p>
               </div>
 
-              <div className="rounded-[24px] border border-border bg-background px-5 py-5">
+              <div className="min-w-0 overflow-hidden rounded-[24px] border border-border bg-background px-5 py-5">
                 <p className="flex items-center gap-2 text-sm uppercase tracking-[0.2em] text-text-muted">
                   <MapPin className="h-4 w-4 text-accent" aria-hidden />
                   Présence
                 </p>
-                <p className="mt-3 text-xl font-semibold text-primary">
-                  {city} · {industry}
+                <p className="mt-3 text-[1.25rem] font-semibold leading-tight text-primary sm:text-[1.45rem]">
+                  <span className="block">{city}</span>
+                  <span className="mt-1 block">{industry}</span>
                 </p>
               </div>
             </div>
 
-            <div className="rounded-[28px] border border-border bg-primary px-6 py-6 text-text-inverse">
+            <div className="min-w-0 overflow-hidden rounded-[28px] border border-border bg-primary px-6 py-6 text-text-inverse">
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-sm uppercase tracking-[0.24em] text-white/70">
@@ -375,24 +378,24 @@ export function PrivateRetellDemo() {
             </div>
           </div>
 
-          <div className="space-y-4">
-            <div className="rounded-[28px] border border-border bg-background px-5 py-5">
+          <div className="min-w-0 space-y-4">
+            <div className="min-w-0 overflow-hidden rounded-[28px] border border-border bg-background px-5 py-5">
               <div className="flex items-center gap-3">
                 <div className="flex h-11 w-11 items-center justify-center rounded-full bg-accent/12 text-accent">
                   <Sparkles className="h-5 w-5" aria-hidden />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm uppercase tracking-[0.2em] text-text-muted">
                     Essayez de demander
                   </p>
-                  <p className="mt-1 text-base font-medium text-primary">
+                  <p className="mt-1 break-words text-[0.97rem] font-medium leading-7 text-primary sm:text-base">
                     &ldquo;Bonjour, j&apos;appelle pour voir si vous prenez encore des nouveaux clients.&rdquo;
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="rounded-[28px] border border-border bg-background px-5 py-5">
+            <div className="min-w-0 overflow-hidden rounded-[28px] border border-border bg-background px-5 py-5">
               <p className="text-sm uppercase tracking-[0.2em] text-text-muted">
                 Transcription en direct
               </p>
@@ -422,8 +425,8 @@ export function PrivateRetellDemo() {
         </div>
       </Card>
 
-      <div className="grid gap-6">
-        <Card className="border-border-strong bg-white/92 p-7 backdrop-blur-sm">
+      <div className="min-w-0 grid gap-6">
+        <Card className="min-w-0 overflow-hidden border-border-strong bg-white/92 p-7 backdrop-blur-sm">
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-accent">
             Ce que l&apos;agent fait pour vous
           </p>
@@ -443,7 +446,7 @@ export function PrivateRetellDemo() {
           </div>
         </Card>
 
-        <Card className="border-border-strong bg-primary p-7 text-text-inverse shadow-[0_18px_60px_rgba(15,35,65,0.18)]">
+        <Card className="min-w-0 overflow-hidden border-border-strong bg-primary p-7 text-text-inverse shadow-[0_18px_60px_rgba(15,35,65,0.18)]">
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-white/70">
             Pourquoi cette expérience marque les esprits
           </p>
@@ -454,7 +457,7 @@ export function PrivateRetellDemo() {
           </div>
         </Card>
 
-        <Card className="border-border-strong bg-white/92 p-7 backdrop-blur-sm">
+        <Card className="min-w-0 overflow-hidden border-border-strong bg-white/92 p-7 backdrop-blur-sm">
           <p className="font-mono text-xs uppercase tracking-[0.24em] text-accent">
             Quelques demandes à essayer
           </p>

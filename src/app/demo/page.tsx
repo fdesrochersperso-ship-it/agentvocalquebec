@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { PrivateRetellDemo } from "@/components/sections/private-retell-demo";
 
 const outcomeStats = [
-  { value: "fr-CA", label: "français d'ici" },
+  { value: "Voix d'ici", label: "ton local" },
   { value: "24/7", label: "réponse continue" },
   { value: "< 1 min", label: "prise en charge" },
 ] as const;
@@ -33,12 +33,12 @@ export default function DemoPage() {
       <div className="absolute inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,_rgba(255,255,255,0.85),_rgba(255,255,255,0))]" />
 
       <div className="relative mx-auto flex max-w-[1280px] flex-col gap-14 px-6 py-10 sm:px-8 lg:px-10 lg:py-14">
-        <section className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-          <div className="max-w-[760px]">
+        <section className="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] lg:items-center">
+          <div className="min-w-0 max-w-[760px]">
             <p className="font-mono text-sm uppercase tracking-[0.28em] text-accent">
               Démo interactive
             </p>
-            <h1 className="mt-5 font-display text-[clamp(3rem,7vw,5.5rem)] leading-[0.96] text-primary">
+            <h1 className="mt-5 max-w-[10ch] text-balance font-display text-[clamp(2.8rem,8vw,5.15rem)] leading-[0.92] text-primary">
               Un agent vocal qui répond comme si votre équipe décrochait.
             </h1>
             <p className="mt-6 max-w-[62ch] text-lg leading-8 text-text-secondary sm:text-xl">
@@ -48,7 +48,7 @@ export default function DemoPage() {
             </p>
           </div>
 
-          <Card className="border-border-strong bg-white/90 p-7 backdrop-blur-sm">
+          <Card className="min-w-0 overflow-hidden border-border-strong bg-white/90 p-7 backdrop-blur-sm">
             <p className="font-mono text-xs uppercase tracking-[0.26em] text-accent">
               Ce que la démo met en valeur
             </p>
@@ -65,12 +65,12 @@ export default function DemoPage() {
                 {outcomeStats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="rounded-xl border border-border bg-background px-4 py-4 text-center"
+                    className="min-w-0 overflow-hidden rounded-xl border border-border bg-background px-3 py-4 text-center"
                   >
-                    <p className="font-display text-3xl leading-none text-primary">
+                    <p className="text-balance font-display text-[1.7rem] leading-[0.95] text-primary sm:text-[2rem]">
                       {stat.value}
                     </p>
-                    <p className="mt-2 text-xs uppercase tracking-[0.2em] text-text-muted">
+                    <p className="mt-2 break-words text-[11px] uppercase tracking-[0.18em] text-text-muted">
                       {stat.label}
                     </p>
                   </div>
