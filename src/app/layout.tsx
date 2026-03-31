@@ -40,7 +40,8 @@ export const metadata: Metadata = {
   },
 };
 
-const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
+const googleAnalyticsId =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || "G-8QWS9JR0N9";
 
 export default function RootLayout({
   children,
