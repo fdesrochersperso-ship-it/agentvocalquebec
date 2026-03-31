@@ -14,6 +14,12 @@ import {
   Sparkles,
   Waves,
 } from "lucide-react";
+import {
+  trackDemoCallConnected,
+  trackDemoCallEnded,
+  trackDemoCallError,
+  trackDemoCallStarted,
+} from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
@@ -94,6 +100,11 @@ function getErrorMessage(upstreamStatus?: number): string {
 export function PrivateRetellDemo() {
   const clientRef = useRef<RetellWebClient | null>(null);
   const endModeRef = useRef<EndMode>("ended");
+  const hasTrackedConnectedRef = useRef(false);
+  const analyticsContextRef = useRef({
+    industry: "Clinique dentaire",
+    offerFocus: "prise de rendez-vous",
+  });
 
   const [sdkReady, setSdkReady] = useState(false);
   const [status, setStatus] = useState<DemoStatus>("idle");
@@ -116,6 +127,10 @@ export function PrivateRetellDemo() {
     useState<TranscriptLine[]>(DEFAULT_TRANSCRIPT);
 
   useEffect(() => {
+    analyticsContextRef.current = { industry, offerFocus };
+  }, [industry, offerFocus]);
+
+  useEffect(() => {
     let disposed = false;
 
     async function setupClient() {
@@ -126,15 +141,34 @@ export function PrivateRetellDemo() {
       clientRef.current = client;
 
       client.on("call_started", () => {
+        if (!hasTrackedConnectedRef.current) {
+          hasTrackedConnectedRef.current = true;
+          trackDemoCallConnected({
+            industry: analyticsContextRef.current.industry,
+            offerFocus: analyticsContextRef.current.offerFocus,
+          });
+        }
         setStatus("live");
         setError(null);
       });
 
       client.on("call_ready", () => {
+        if (!hasTrackedConnectedRef.current) {
+          hasTrackedConnectedRef.current = true;
+          trackDemoCallConnected({
+            industry: analyticsContextRef.current.industry,
+            offerFocus: analyticsContextRef.current.offerFocus,
+          });
+        }
         setStatus("live");
       });
 
       client.on("call_ended", () => {
+        trackDemoCallEnded({
+          industry: analyticsContextRef.current.industry,
+          offerFocus: analyticsContextRef.current.offerFocus,
+          endMode: endModeRef.current,
+        });
         setStatus(endModeRef.current);
         setAgentSpeaking(false);
         setIsMuted(false);
@@ -158,6 +192,11 @@ export function PrivateRetellDemo() {
 
       client.on("error", () => {
         endModeRef.current = "error";
+        trackDemoCallError({
+          errorType: "sdk_error",
+          industry: analyticsContextRef.current.industry,
+          offerFocus: analyticsContextRef.current.offerFocus,
+        });
         setError("La session audio a rencontré une erreur. Arrêtez l'appel puis redémarrez la démonstration.");
       });
 
@@ -183,6 +222,7 @@ export function PrivateRetellDemo() {
     setCallId(null);
     setTranscriptLines(DEFAULT_TRANSCRIPT);
     endModeRef.current = "ended";
+    hasTrackedConnectedRef.current = false;
 
     try {
       const res = await fetch("/api/retell-web-call", {
@@ -211,16 +251,32 @@ export function PrivateRetellDemo() {
 
       if (!res.ok || !data.ok) {
         if ("error" in data && data.error === "retell_non_configure") {
+          trackDemoCallError({
+            errorType: "retell_not_configured",
+            industry,
+            offerFocus,
+            upstreamStatus: "upstreamStatus" in data ? data.upstreamStatus : undefined,
+          });
           setError(
             "La démonstration n'est pas disponible pour le moment. Vérifiez la configuration de l'appel puis réessayez."
           );
         } else {
+          trackDemoCallError({
+            errorType: "call_creation_failed",
+            industry,
+            offerFocus,
+            upstreamStatus: "upstreamStatus" in data ? data.upstreamStatus : undefined,
+          });
           setError(getErrorMessage("upstreamStatus" in data ? data.upstreamStatus : undefined));
         }
         setStatus("error");
         return;
       }
 
+      trackDemoCallStarted({
+        industry,
+        offerFocus,
+      });
       setCallId(data.callId);
       setStatus("connecting");
       await client.startCall({
@@ -229,6 +285,11 @@ export function PrivateRetellDemo() {
       });
       await client.startAudioPlayback().catch(() => undefined);
     } catch {
+      trackDemoCallError({
+        errorType: "network_error",
+        industry,
+        offerFocus,
+      });
       setStatus("error");
       setError("Une erreur réseau a empêché le démarrage de l'appel. Réessayez avec une connexion stable.");
     }

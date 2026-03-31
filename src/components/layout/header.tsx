@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { trackDemoCtaClick } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -158,6 +159,16 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
+              onClick={
+                link.href === "/demo-gratuite"
+                  ? () =>
+                      trackDemoCtaClick({
+                        ctaText: link.label,
+                        destinationPath: link.href,
+                        location: "header_nav",
+                      })
+                  : undefined
+              }
               className="text-base font-medium text-primary hover:text-primary-dark transition-colors"
             >
               {link.label}
@@ -251,7 +262,14 @@ export function Header() {
 
                 <Link
                   href="/demo-gratuite"
-                  onClick={closeMobileMenu}
+                  onClick={() => {
+                    trackDemoCtaClick({
+                      ctaText: "Obtenir un rappel",
+                      destinationPath: "/demo-gratuite",
+                      location: "header_mobile_nav",
+                    });
+                    closeMobileMenu();
+                  }}
                   className="flex min-h-[44px] items-center border-t border-border px-6 py-3 text-base font-medium text-primary hover:bg-primary/5"
                 >
                   Obtenir un rappel

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { DemoForm } from "@/components/sections/demo-form";
+import { TrackedEmailLink } from "@/components/ui/tracked-email-link";
 
 export const metadata: Metadata = {
   title: "Démo gratuite",
@@ -17,12 +18,12 @@ export default function DemoPage() {
     >
       <p className="mt-6 max-w-[600px] text-center text-[0.9375rem] leading-relaxed text-text-secondary mx-auto lg:mt-8">
         Préférez qu&apos;on vous rappelle sans remplir le formulaire? Écrivez-nous à{" "}
-        <a
-          href="mailto:info@agentvocalquebec.com"
+        <TrackedEmailLink
+          location="demo_page_email"
           className="font-medium text-accent underline-offset-2 hover:underline"
         >
           info@agentvocalquebec.com
-        </a>{" "}
+        </TrackedEmailLink>{" "}
         — même délai de réponse.
       </p>
       <div className="mt-8 lg:mt-10">
