@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { TrackedEmailLink } from "@/components/ui/tracked-email-link";
 
 export interface CtaSectionProps {
   title?: string;
@@ -50,12 +51,12 @@ export function CtaSection({
           </p>
           <p className="text-[0.875rem] leading-[1.5] text-text-inverse/80">
             Vous préférez écrire?{" "}
-            <a
-              href="mailto:info@agentvocalquebec.com"
+            <TrackedEmailLink
+              location="cta_section_email"
               className="underline underline-offset-2 hover:text-text-inverse"
             >
               info@agentvocalquebec.com
-            </a>
+            </TrackedEmailLink>
           </p>
         </AnimateOnScroll>
       </div>

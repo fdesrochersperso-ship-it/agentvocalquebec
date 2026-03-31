@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { trackDemoCtaClick } from "@/lib/analytics";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
+import { TrackedEmailLink } from "@/components/ui/tracked-email-link";
 
 const NAV_LINKS = [
   { href: "/", label: "Accueil" },
@@ -45,6 +47,16 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
+                    onClick={
+                      link.href === "/demo-gratuite"
+                        ? () =>
+                            trackDemoCtaClick({
+                              ctaText: link.label,
+                              destinationPath: link.href,
+                              location: "footer_nav",
+                            })
+                        : undefined
+                    }
                     className="flex min-h-[44px] min-w-[44px] items-center text-sm text-text-inverse/90 hover:text-text-inverse transition-colors"
                   >
                     {link.label}
@@ -59,12 +71,12 @@ export function Footer() {
             <h3 className="text-sm font-semibold uppercase tracking-wider text-text-inverse/80 mb-4">
               Contact
             </h3>
-            <a
-              href="mailto:info@agentvocalquebec.com"
+            <TrackedEmailLink
+              location="footer_contact"
               className="flex min-h-[44px] min-w-[44px] items-center text-sm text-text-inverse/90 hover:text-text-inverse transition-colors"
             >
               info@agentvocalquebec.com
-            </a>
+            </TrackedEmailLink>
           </div>
 
           {/* Col 4: Legal */}

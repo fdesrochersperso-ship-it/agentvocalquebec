@@ -1,7 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  trackDemoFormError,
+  trackDemoFormStarted,
+  trackGenerateLead,
+} from "@/lib/analytics";
 import { getLeadClientContext } from "@/lib/lead-context";
 import { CheckCircle2 } from "lucide-react";
 
@@ -28,6 +33,7 @@ export function DemoForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const hasTrackedFormStart = useRef(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -62,14 +68,26 @@ export function DemoForm() {
 
       if (!res.ok) {
         if (res.status === 503) {
+          trackDemoFormError({
+            errorType: "service_unavailable",
+            httpStatus: res.status,
+          });
           setError(
             "Le formulaire est temporairement indisponible. Réessayez plus tard ou écrivez-nous à info@agentvocalquebec.com — on vous répond sous 24 h."
           );
         } else if (res.status === 502) {
+          trackDemoFormError({
+            errorType: "upstream_failure",
+            httpStatus: res.status,
+          });
           setError(
             "L'envoi a échoué côté serveur. Réessayez dans quelques minutes ou écrivez-nous à info@agentvocalquebec.com."
           );
         } else {
+          trackDemoFormError({
+            errorType: "request_failed",
+            httpStatus: res.status,
+          });
           setError(
             "Impossible d'envoyer le formulaire pour le moment. Vérifiez votre connexion et réessayez."
           );
@@ -77,9 +95,16 @@ export function DemoForm() {
         return;
       }
 
+      trackGenerateLead({
+        companyType,
+        leadSource: "website_demo_form",
+      });
       setIsSubmitted(true);
       form.reset();
     } catch {
+      trackDemoFormError({
+        errorType: "network_error",
+      });
       setError(
         "Une erreur réseau s'est produite. Vérifiez votre connexion et réessayez."
       );
@@ -125,7 +150,15 @@ export function DemoForm() {
         ))}
       </ul>
 
-      <form onSubmit={handleSubmit} className="relative flex flex-col gap-4">
+      <form
+        onSubmit={handleSubmit}
+        onFocusCapture={() => {
+          if (hasTrackedFormStart.current) return;
+          hasTrackedFormStart.current = true;
+          trackDemoFormStarted();
+        }}
+        className="relative flex flex-col gap-4"
+      >
         {/* Honeypot — leave hidden; bots often fill this */}
         <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden opacity-0">
           <label htmlFor="website">Site web</label>

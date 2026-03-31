@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { forwardRef, type ButtonHTMLAttributes } from "react";
+import { trackDemoCtaClick } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 export type ButtonVariant = "primary" | "secondary" | "tertiary";
@@ -72,13 +73,46 @@ export const Button = forwardRef<
     className
   );
 
+  const isTrackedDemoCta = typeof href === "string" && href.startsWith("/demo-gratuite");
+
+  function getButtonText(node: React.ReactNode): string | undefined {
+    if (typeof node === "string" || typeof node === "number") {
+      return String(node).trim();
+    }
+
+    if (Array.isArray(node)) {
+      const text = node
+        .map((child) => getButtonText(child))
+        .filter(Boolean)
+        .join(" ")
+        .trim();
+
+      return text || undefined;
+    }
+
+    return undefined;
+  }
+
   if (href) {
+    const anchorProps = props as React.AnchorHTMLAttributes<HTMLAnchorElement>;
+    const { onClick, ...restAnchorProps } = anchorProps;
+
     return (
       <Link
         ref={ref as React.Ref<HTMLAnchorElement>}
         href={href}
         className={combinedClassName}
-        {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
+        onClick={(event) => {
+          onClick?.(event);
+
+          if (!event.defaultPrevented && isTrackedDemoCta) {
+            trackDemoCtaClick({
+              ctaText: getButtonText(children),
+              destinationPath: href,
+            });
+          }
+        }}
+        {...restAnchorProps}
       >
         {children}
       </Link>
