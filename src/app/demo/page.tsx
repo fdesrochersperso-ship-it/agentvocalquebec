@@ -96,9 +96,13 @@ export default function DemoPage() {
                         Comme un appel pris par votre réception
                       </p>
                     </div>
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-accent">
+                    <a
+                      href="#demo-live"
+                      aria-label="Aller à la démo interactive"
+                      className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 text-accent transition-all duration-200 hover:scale-[1.04] hover:bg-accent hover:text-white"
+                    >
                       <PhoneIncoming className="h-6 w-6" aria-hidden />
-                    </div>
+                    </a>
                   </div>
                 </div>
 
@@ -157,7 +161,9 @@ export default function DemoPage() {
           </div>
         </section>
 
-        <PrivateRetellDemo />
+        <div id="demo-live" className="scroll-mt-24">
+          <PrivateRetellDemo />
+        </div>
       </div>
     </div>
   );
