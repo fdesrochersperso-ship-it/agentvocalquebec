@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import {
   DM_Serif_Display,
   Source_Sans_3,
@@ -39,6 +40,8 @@ export const metadata: Metadata = {
   },
 };
 
+const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -52,6 +55,7 @@ export default function RootLayout({
       <body className="bg-background antialiased font-body pb-20 md:pb-0">
         <SiteChrome>{children}</SiteChrome>
       </body>
+      {googleAnalyticsId ? <GoogleAnalytics gaId={googleAnalyticsId} /> : null}
     </html>
   );
 }
