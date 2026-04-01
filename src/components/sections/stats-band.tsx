@@ -18,7 +18,7 @@ const STATS = [
   {
     value: 24,
     suffix: "/7",
-    label: "disponible, même le dimanche à 2h du matin",
+    label: "disponible, même un dimanche à 2 h du matin",
   },
 ] as const;
 

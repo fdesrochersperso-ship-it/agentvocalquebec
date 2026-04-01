@@ -11,7 +11,7 @@ const PAGE_PROPS = {
   badge: "Garages automobiles",
   title: "L'agent vocal IA pour garages et ateliers mécaniques",
   subtitle:
-    "Rendez-vous d'entretien, statut des réparations, rappels de service — pendant que votre équipe se concentre sur les véhicules.",
+    "Rendez-vous d'entretien, statut des réparations, rappels de service : pendant que votre équipe se concentre sur les véhicules.",
   stats: [
     { value: "50%", label: "plus de rendez-vous bookés" },
     { value: "0", label: "attente téléphonique" },
@@ -54,13 +54,13 @@ const PAGE_PROPS = {
       icon: "Bell",
       title: "Rappels saisonniers",
       description:
-        "Pneus d'hiver, inspection annuelle — rappels automatiques.",
+        "Pneus d'hiver, inspection annuelle : rappels automatiques.",
     },
     {
       icon: "Car",
       title: "Collecte infos véhicule",
       description:
-        "Marque, modèle, année, problème — avant le rendez-vous.",
+        "Marque, modèle, année, problème : avant le rendez-vous.",
     },
   ],
   integrations: [
@@ -78,7 +78,7 @@ const PAGE_PROPS = {
     {
       question: "Et pour les pièces?",
       answer:
-        "L'agent peut vérifier les disponibilités dans votre inventaire si le système est connecté, ou prendre note de la demande.",
+        "L'agent peut vérifier les disponibilités dans votre inventaire si le système est connecté, ou prendre la demande en note.",
     },
   ],
 };

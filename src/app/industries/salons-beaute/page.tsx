@@ -11,7 +11,7 @@ const PAGE_PROPS = {
   badge: "Salons & beauté",
   title: "L'agent vocal IA pour les salons de beauté et spas",
   subtitle:
-    "Réservations, services disponibles, prix, annulations — votre agent gère les appels pendant que vous servez vos clients.",
+    "Réservations, services disponibles, prix, annulations : votre agent gère les appels pendant que vous servez vos clients.",
   stats: [
     { value: "30%", label: "moins de no-shows" },
     { value: "24/7", label: "réservations jour et nuit" },
@@ -21,7 +21,7 @@ const PAGE_PROPS = {
       icon: "PhoneMissed",
       title: "Les mains dans les cheveux",
       description:
-        "Coiffeur, esthéticienne, massothérapeute — quand vous travaillez, personne pour décrocher.",
+        "Coiffeur, esthéticienne, massothérapeute : quand vous travaillez, personne pour décrocher.",
     },
     {
       icon: "CalendarX",
@@ -47,7 +47,7 @@ const PAGE_PROPS = {
       icon: "CalendarX",
       title: "Gestion des annulations",
       description:
-        "Reçoit les annulations, libère la plage et peut proposer à quelqu'un sur la liste d'attente.",
+        "Reçoit les annulations, libère la plage et peut proposer la place à quelqu'un sur la liste d'attente.",
     },
     {
       icon: "Bell",

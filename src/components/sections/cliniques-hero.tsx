@@ -26,7 +26,7 @@ export function CliniquesHero() {
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.2}>
             <p className="max-w-xl text-[1.125rem] leading-[1.6] text-text-secondary">
-              Prise de rendez-vous, questions d'assurance, rappels de suivi —
+              Prise de rendez-vous, questions d&apos;assurance, rappels de suivi —
               le tout en québécois naturel, 24 heures sur 24. Pendant que
               votre équipe se concentre sur les soins.
             </p>

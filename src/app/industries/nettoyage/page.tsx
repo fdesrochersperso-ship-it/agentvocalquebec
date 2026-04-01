@@ -11,7 +11,7 @@ const PAGE_PROPS = {
   badge: "Nettoyage & entretien",
   title: "L'agent vocal IA pour les entreprises de nettoyage",
   subtitle:
-    "Demandes de soumissions, planification de visites, types de services, urgences — votre agent répond pendant que vous êtes sur le terrain.",
+    "Demandes de soumissions, planification de visites, types de services, urgences : votre agent répond pendant que vous êtes sur le terrain.",
   stats: [
     { value: "0", label: "appel manqué" },
     { value: "100%", label: "soumissions captées" },
@@ -21,13 +21,13 @@ const PAGE_PROPS = {
       icon: "PhoneMissed",
       title: "Sur le terrain, pas au bureau",
       description:
-        "Vous êtes chez un client. Un prospect appelle pour une soumission. Il laisse un message... et appelle un concurrent.",
+        "Vous êtes chez un client. Un prospect appelle pour une soumission. Il laisse un message et appelle un concurrent.",
     },
     {
       icon: "Clock",
       title: "Les urgences n'attendent pas",
       description:
-        "Dégât d'eau, nettoyage post-construction — les clients veulent une réponse rapide.",
+        "Dégât d'eau, nettoyage post-construction : les clients veulent une réponse rapide.",
     },
   ],
   useCases: [
@@ -35,25 +35,25 @@ const PAGE_PROPS = {
       icon: "ClipboardList",
       title: "Demandes de soumissions",
       description:
-        "Collecte le type de bâtiment, la superficie, la fréquence souhaitée. Vous rappelez avec une soumission prête.",
+        "Ramasse le type de bâtiment, la superficie et la fréquence souhaitée. Vous rappelez avec une soumission prête.",
     },
     {
       icon: "Calendar",
       title: "Planification de visites",
       description:
-        "Booke les visites sur site pour évaluation et soumission.",
+        "Booke les visites sur place pour l'évaluation et la soumission.",
     },
     {
       icon: "ListChecks",
       title: "Types de services et prix",
       description:
-        "Répond aux questions sur résidentiel vs commercial, récurrent vs ponctuel, et les tarifs de base.",
+        "Répond aux questions sur résidentiel vs commercial, récurrent vs ponctuel, et sur les tarifs de base.",
     },
     {
       icon: "AlertTriangle",
       title: "Urgences",
       description:
-        "Dégâts, post-construction — l'agent évalue l'urgence et vous alerte pour prioriser.",
+        "Dégâts, post-construction : l'agent évalue l'urgence et vous alerte pour prioriser.",
     },
   ],
   integrations: ["Jobber", "Housecall Pro", "ServiceTitan", "Google Calendar", "Outlook"],
@@ -61,12 +61,12 @@ const PAGE_PROPS = {
     {
       question: "J'ai une petite équipe, est-ce que ça vaut la peine?",
       answer:
-        "Oui. Chaque appel manqué, c'est souvent un contrat ou une soumission qui file chez un concurrent. Une courte démo suffit pour voir si l'agent rentabilise l'investissement pour votre équipe.",
+        "Oui. Chaque appel manqué, c'est souvent un contrat ou une soumission qui file chez un concurrent. Une courte démo suffit pour voir vite si l'agent rentabilise l'investissement.",
     },
     {
       question: "Est-ce que l'agent peut prendre les infos pour une soumission?",
       answer:
-        "Oui. Adresse, type de bâtiment, superficie, fréquence — l'agent collecte tout. Vous recevez un résumé et vous rappelez avec une soumission préparée.",
+        "Oui. Adresse, type de bâtiment, superficie, fréquence : l'agent collecte tout. Vous recevez un résumé et vous rappelez avec une soumission préparée.",
     },
   ],
 };

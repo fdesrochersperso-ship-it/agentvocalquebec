@@ -14,7 +14,7 @@ export function ConstructionPain() {
         <div>
           <div className="mb-2 font-mono text-stat font-bold text-accent">77%</div>
           <p className="text-[1.125rem] leading-[1.6] text-text-secondary">
-            des entreprises de construction citent la pénurie de main-d'œuvre
+            des entreprises de construction citent la pénurie de main-d&apos;œuvre
             comme leur contrainte #1.
           </p>
         </div>
@@ -22,8 +22,8 @@ export function ConstructionPain() {
         <p className="text-[1.125rem] leading-[1.6] text-text-primary">
           Vous pouvez pas engager une réceptionniste à temps plein pour 4-5
           appels par jour. Mais ces 4-5 appels valent des milliers de dollars.
-          Chaque appel manqué, c'est un contrat qui va chez votre concurrent.
-          Chaque message vocal non écouté, c'est une urgence qui aurait pu être
+          Chaque appel manqué, c&apos;est un contrat qui va chez votre concurrent.
+          Chaque message vocal non écouté, c&apos;est une urgence qui aurait pu être
           facturée.
         </p>
       </AnimateOnScroll>

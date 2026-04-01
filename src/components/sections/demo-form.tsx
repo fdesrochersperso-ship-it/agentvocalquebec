@@ -24,9 +24,9 @@ const inputStyles =
   "w-full rounded-lg border border-border px-4 py-3 font-body text-[1rem] text-primary placeholder:text-text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent";
 
 const benefits = [
-  "Appel de qualification sous 24 h ouvrables",
-  "Aucune carte de crédit · aucun engagement",
-  "On vous montre la voix québécoise + le tableau de bord",
+  "Appel de qualification d'ici 24 h ouvrables",
+  "Pas de carte de crédit · pas d'engagement",
+  "On vous montre la voix québécoise et le tableau de bord",
 ];
 
 export function DemoForm() {
@@ -73,7 +73,7 @@ export function DemoForm() {
             httpStatus: res.status,
           });
           setError(
-            "Le formulaire est temporairement indisponible. Réessayez plus tard ou écrivez-nous à info@agentvocalquebec.com — on vous répond sous 24 h."
+            "Le formulaire est temporairement indisponible. Réessayez plus tard ou écrivez-nous à info@agentvocalquebec.com : on vous répond d'ici 24 h."
           );
         } else if (res.status === 502) {
           trackDemoFormError({
@@ -125,8 +125,9 @@ export function DemoForm() {
           C’est noté — merci!
         </p>
         <p className="mt-3 text-[1rem] leading-relaxed text-text-secondary">
-          Un membre de l’équipe vous joint sous <strong>24 heures ouvrables</strong>{" "}
-          pour planifier votre démo de 15 minutes et répondre à vos questions.
+          Un membre de l&apos;équipe vous joint d&apos;ici{" "}
+          <strong>24 heures ouvrables</strong> pour planifier votre démo de 15
+          minutes et répondre à vos questions.
         </p>
       </div>
     );
@@ -197,7 +198,7 @@ export function DemoForm() {
             required
             autoComplete="organization"
             className={inputStyles}
-            placeholder="Nom de l’entreprise"
+            placeholder="Nom de l'entreprise"
           />
         </div>
 
@@ -243,7 +244,7 @@ export function DemoForm() {
             htmlFor="company-type"
             className="mb-1 block font-body text-sm font-medium text-primary"
           >
-            Type d’entreprise
+            Type d&apos;entreprise
           </label>
           <select
             id="company-type"
@@ -273,7 +274,7 @@ export function DemoForm() {
             name="message"
             rows={4}
             className={`${inputStyles} min-h-[100px] resize-y`}
-            placeholder="Ex. nombre d’appels par semaine, outils déjà utilisés, ville…"
+            placeholder="Ex. nombre d'appels par semaine, outils déjà utilisés, ville…"
           />
         </div>
 
@@ -295,8 +296,8 @@ export function DemoForm() {
       </form>
 
       <p className="mt-5 text-center text-[0.8125rem] leading-[1.5] text-text-muted">
-        En soumettant ce formulaire, vous acceptez d’être contacté au sujet
-        d’Agent Vocal Québec. Pas de liste d’envoi, pas de frais cachés.
+        En soumettant ce formulaire, vous acceptez d&apos;être contacté au sujet
+        d&apos;Agent Vocal Québec. Pas de liste d&apos;envoi, pas de frais cachés.
       </p>
     </div>
   );

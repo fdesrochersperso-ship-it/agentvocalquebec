@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { href: "/", label: "Accueil" },
   { href: "/industries", label: "Industries" },
   { href: "/fonctionnalites", label: "Fonctionnalités" },
-  { href: "/demo-gratuite", label: "Obtenir un rappel" },
+  { href: "/demo-gratuite", label: "Se faire rappeler" },
   { href: "/faq", label: "FAQ" },
 ] as const;
 
@@ -33,7 +33,7 @@ export function Footer() {
               Agent Vocal Québec
             </Link>
             <p className="text-sm text-text-inverse/90 max-w-[240px]">
-              Votre agent vocal IA québécois.
+              L&apos;agent vocal IA pensé pour le Québec.
             </p>
           </div>
 

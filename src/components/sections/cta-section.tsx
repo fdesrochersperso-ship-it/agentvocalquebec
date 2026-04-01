@@ -13,12 +13,12 @@ export interface CtaSectionProps {
 }
 
 const DEFAULT_PROPS = {
-  title: "Prêt à ne plus manquer un seul appel?",
+  title: "Prêt à arrêter de manquer des appels?",
   subtitle:
-    "Réservez une démo de 15 minutes. On vous rappelle sous 24 h ouvrables — voix québécoise, tableau de bord, vos questions.",
+    "Réservez une démo de 15 minutes. On vous rappelle d'ici 24 h ouvrables pour vous montrer la voix, le tableau de bord et comment ça se branche chez vous.",
   ctaText: "Obtenir ma démo gratuite",
   ctaHref: "/demo-gratuite",
-  disclaimer: "Aucun engagement. Aucune carte de crédit.",
+  disclaimer: "Aucun engagement. Pas de carte de crédit.",
 } as const;
 
 export function CtaSection({
@@ -50,7 +50,7 @@ export function CtaSection({
             {disclaimer}
           </p>
           <p className="text-[0.875rem] leading-[1.5] text-text-inverse/80">
-            Vous préférez écrire?{" "}
+            Vous aimez mieux nous écrire?{" "}
             <TrackedEmailLink
               location="cta_section_email"
               className="underline underline-offset-2 hover:text-text-inverse"

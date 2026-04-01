@@ -11,7 +11,7 @@ const PAGE_PROPS = {
   badge: "Services juridiques",
   title: "L'agent vocal IA pour les cabinets juridiques",
   subtitle:
-    "Consultations initiales, filtrage de dossiers, prise de rendez-vous — votre agent gère l'accueil téléphonique en toute confidentialité.",
+    "Consultations initiales, filtrage de dossiers, prise de rendez-vous : votre agent gère l'accueil téléphonique en toute confidentialité.",
   stats: [
     { value: "100%", label: "confidentialité" },
     { value: "0", label: "appel manqué" },
@@ -27,7 +27,7 @@ const PAGE_PROPS = {
       icon: "Lock",
       title: "L'information doit rester confidentielle",
       description:
-        "Chaque appel touche à des dossiers sensibles. L'accueil doit être professionnel et discret.",
+        "Chaque appel touche à des dossiers sensibles. L'accueil doit rester professionnel et discret.",
     },
   ],
   useCases: [
@@ -35,7 +35,7 @@ const PAGE_PROPS = {
       icon: "UserPlus",
       title: "Consultations initiales",
       description:
-        "Collecte le motif de la consultation et les infos de base. Dirige vers le bon avocat ou domaine de pratique.",
+        "Collecte le motif de la consultation et les infos de base. Dirige vers le bon avocat ou le bon domaine de pratique.",
     },
     {
       icon: "CalendarCheck",
@@ -53,7 +53,7 @@ const PAGE_PROPS = {
       icon: "ListChecks",
       title: "Suivi de dossiers",
       description:
-        "Rappels pour signatures, échéances, mises à jour — l'agent coordonne avec votre équipe.",
+        "Rappels pour signatures, échéances, mises à jour : l'agent coordonne avec votre équipe.",
     },
   ],
   integrations: ["Clio", "PracticePanther", "Google Calendar", "Outlook", "MyCase"],
@@ -61,12 +61,12 @@ const PAGE_PROPS = {
     {
       question: "Comment assurez-vous la confidentialité des dossiers?",
       answer:
-        "L'agent ne demande jamais de détails sensibles par téléphone. Il collecte le motif général et dirige l'appel. Données hébergées au Canada, conformes à la Loi 25 et aux obligations professionnelles.",
+        "L'agent ne demande jamais de détails sensibles par téléphone. Il collecte le motif général et dirige l'appel. Données hébergées au Canada, conformes à la Loi 25 et à vos obligations professionnelles.",
     },
     {
       question: "Peut-il gérer les urgences juridiques?",
       answer:
-        "Oui. Vous définissez les critères d'urgence. L'agent priorise et transfère immédiatement les cas critiques au bon avocat.",
+        "Oui. Vous fixez les critères d'urgence. L'agent priorise et transfère immédiatement les cas critiques au bon avocat.",
     },
   ],
 };

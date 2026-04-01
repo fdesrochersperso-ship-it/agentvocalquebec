@@ -16,7 +16,7 @@ const INDUSTRIES_LINKS = [
 ] as const;
 
 const DESKTOP_NAV_LINKS = [
-  { href: "/demo-gratuite", label: "Obtenir un rappel" },
+  { href: "/demo-gratuite", label: "Se faire rappeler" },
   { href: "/faq", label: "FAQ" },
 ] as const;
 

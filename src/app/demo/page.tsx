@@ -93,7 +93,7 @@ export default function DemoPage() {
                         Aperçu de l&apos;expérience
                       </p>
                       <p className="mt-2 text-[1.7rem] font-semibold leading-tight text-primary">
-                        Comme un appel pris par votre réception
+                        Comme un appel pris par quelqu&apos;un de chez vous
                       </p>
                     </div>
                     <a

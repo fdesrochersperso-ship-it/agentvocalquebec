@@ -4,7 +4,7 @@ import { FaqPageContent } from "@/components/sections/faq-page-content";
 export const metadata = {
   title: "FAQ | Agent Vocal Québec",
   description:
-    "Questions fréquentes sur notre agent vocal IA. Fonctionnement, données, intégrations et engagement.",
+    "Questions fréquentes sur notre agent vocal IA. Fonctionnement, données, intégrations et modalités.",
 };
 
 export default function FaqPage() {
@@ -12,7 +12,7 @@ export default function FaqPage() {
     <>
       <PageHero
         title="Questions fréquentes"
-        subtitle="Tout ce que vous devez savoir sur notre agent vocal IA."
+        subtitle="Tout ce qu'il faut savoir avant de brancher l'agent chez vous."
         className="pt-8 pb-4 lg:pt-12 lg:pb-6"
       />
 

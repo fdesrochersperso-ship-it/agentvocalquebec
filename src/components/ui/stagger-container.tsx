@@ -28,15 +28,19 @@ export function StaggerContainer({
 }: StaggerContainerProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-  const [delay, setDelay] = useState(staggerDelay);
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(max-width: 768px)").matches;
+  });
 
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 768px)");
-    setDelay(mq.matches ? staggerDelay / 2 : staggerDelay);
-    const handler = () => setDelay(mq.matches ? staggerDelay / 2 : staggerDelay);
+    const handler = (event: MediaQueryListEvent) => setIsMobile(event.matches);
     mq.addEventListener("change", handler);
     return () => mq.removeEventListener("change", handler);
-  }, [staggerDelay]);
+  }, []);
+
+  const delay = isMobile ? staggerDelay / 2 : staggerDelay;
 
   return (
     <motion.div

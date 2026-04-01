@@ -13,7 +13,7 @@ const INDUSTRIES = [
     icon: Stethoscope,
     title: "Cliniques dentaires",
     description:
-      "Prise de rendez-vous, questions d'assurance, rappels — intégré avec vos logiciels de clinique.",
+      "Prise de rendez-vous, questions d'assurance, rappels : branché sur vos outils de clinique.",
     badges: ["35% moins d'appels manqués", "500$+ par appel"],
     href: "/industries/cliniques-dentaires",
   },
@@ -21,7 +21,7 @@ const INDUSTRIES = [
     icon: Sparkles,
     title: "Médico-esthétique",
     description:
-      "Consultations, questions sur les traitements et les prix. L'IA est discrète et professionnelle.",
+      "Consultations, questions sur les traitements et les prix. L'agent reste discret et professionnel.",
     badges: ["2 000$+ par RDV", "0 concurrent IA"],
     href: "/industries/medico-esthetique",
   },
@@ -37,7 +37,7 @@ const INDUSTRIES = [
     icon: Car,
     title: "Garages automobiles",
     description:
-      "Prise de rendez-vous pour réparations, rappels de rappels, gestion des urgences routières.",
+      "Prise de rendez-vous, rappels de service et gestion des urgences routières.",
     badges: ["50% + de RDV", "0 attente"],
     href: "/industries/garages-automobiles",
   },
@@ -52,7 +52,7 @@ export function IndustriesPreview() {
             Adapté à votre industrie
           </h2>
           <p className="mt-4 text-[1.125rem] leading-[1.6] text-text-secondary">
-            Notre agent vocal IA s'adapte aux besoins spécifiques de votre
+            Notre agent vocal IA s&apos;ajuste aux besoins bien concrets de votre
             secteur.
           </p>
         </motion.div>
@@ -114,14 +114,14 @@ export function IndustriesPreview() {
 
           <div className="w-full max-w-xl rounded-xl border border-border bg-surface/50 px-6 py-4">
             <p className="font-body text-[1rem] leading-[1.5] text-text-secondary">
-              Votre industrie n'est pas listée?{" "}
+              Votre secteur n&apos;est pas listé?{" "}
               <Button
                 href="/demo-gratuite"
                 variant="tertiary"
                 size="default"
                 className="inline-flex p-0 h-auto font-semibold"
               >
-                Contactez-nous
+                Parlez-nous-en
               </Button>
             </p>
           </div>

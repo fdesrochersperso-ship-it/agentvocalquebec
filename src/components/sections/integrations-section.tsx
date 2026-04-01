@@ -33,7 +33,8 @@ export function IntegrationsSection() {
         </div>
 
         <p className="text-[1rem] leading-[1.5] text-text-secondary">
-          Votre logiciel n'est pas dans la liste? Contactez-nous — on s'adapte.
+          Votre logiciel n&apos;est pas dans la liste? Contactez-nous — on
+          s&apos;adapte.
         </p>
       </AnimateOnScroll>
     </SectionWrapper>

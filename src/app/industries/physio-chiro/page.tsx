@@ -11,7 +11,7 @@ const PAGE_PROPS = {
   badge: "Physio / Chiro",
   title: "L'agent vocal IA pour les cliniques de physio et chiropratique",
   subtitle:
-    "Rendez-vous par thérapeute, vérification d'assurances, rappels automatiques — votre agent s'occupe de l'accueil téléphonique.",
+    "Rendez-vous par thérapeute, vérification d'assurances, rappels automatiques : votre agent s'occupe de l'accueil téléphonique.",
   stats: [
     { value: "35%", label: "moins d'appels manqués" },
     { value: "0", label: "confusion de rendez-vous" },
@@ -27,7 +27,7 @@ const PAGE_PROPS = {
       icon: "CalendarX",
       title: "Rendez-vous mal dirigés",
       description:
-        "Physio, chiro, masso, ostéo — sans triage, les patients atterrissent chez le mauvais thérapeute.",
+        "Physio, chiro, masso, ostéo : sans triage, les patients aboutissent chez le mauvais thérapeute.",
     },
   ],
   useCases: [
@@ -41,7 +41,7 @@ const PAGE_PROPS = {
       icon: "Shield",
       title: "Vérification assurances collectives",
       description:
-        "Pose les questions de base sur la couverture. Pour les vérifications complètes, transfère à votre équipe.",
+        "Pose les questions de base sur la couverture. Pour les vérifications complètes, il transfère à votre équipe.",
     },
     {
       icon: "Bell",
@@ -66,7 +66,7 @@ const PAGE_PROPS = {
     {
       question: "Comment gérer plusieurs thérapeutes avec des horaires différents?",
       answer:
-        "On s'intègre avec Jane, Cliniko et la plupart des logiciels de clinique. L'agent voit les dispos de chaque thérapeute et booke au bon endroit.",
+        "On se branche à Jane, Cliniko et à la plupart des logiciels de clinique. L'agent voit les dispos de chaque thérapeute et booke au bon endroit.",
     },
   ],
 };

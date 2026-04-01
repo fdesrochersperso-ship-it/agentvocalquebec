@@ -10,9 +10,9 @@ export const metadata = {
 const PAGE_PROPS = {
   badge: "Construction & métiers",
   title:
-    "Arrêtez de perdre des contrats parce que vous êtes sur un chantier",
+    "Arrêtez de perdre des contrats pendant que vous êtes sur le chantier",
   subtitle:
-    "Plomberie, HVAC, électriciens, rénovation — votre agent vocal prend les appels, filtre les urgences et booke les soumissions pendant que vous travaillez.",
+    "Plomberie, HVAC, électriciens, rénovation : votre agent prend les appels, filtre les urgences et booke les soumissions pendant que vous travaillez.",
   stats: [
     { value: "77%", label: "des entreprises citent la pénurie comme #1" },
     { value: "126 000$", label: "perdus par an en appels manqués (PME)" },
@@ -23,7 +23,7 @@ const PAGE_PROPS = {
       icon: "Users",
       title: "77% pénurie de main-d'œuvre",
       description:
-        "Vous pouvez pas engager une réceptionniste pour 4-5 appels par jour. Mais ces appels valent des milliers.",
+        "Vous pouvez pas engager une réceptionniste pour 4 ou 5 appels par jour. Mais ces appels-là valent des milliers.",
     },
     {
       icon: "PhoneMissed",
@@ -35,7 +35,7 @@ const PAGE_PROPS = {
       icon: "Hammer",
       title: "Vous êtes sur le chantier",
       description:
-        "Les mains pleines, le bruit, impossible de répondre professionnellement.",
+        "Les mains pleines, le bruit, impossible de répondre comme il faut.",
     },
   ],
   useCases: [
@@ -43,13 +43,13 @@ const PAGE_PROPS = {
       icon: "AlertTriangle",
       title: "Dispatch d'urgence",
       description:
-        "Fuite d'eau à 22h? L'agent évalue la gravité, collecte l'adresse, vous envoie une notification prioritaire.",
+        "Fuite d'eau à 22 h? L'agent évalue la gravité, ramasse l'adresse et vous envoie une alerte prioritaire.",
     },
     {
       icon: "ClipboardList",
       title: "Prise de soumissions",
       description:
-        "Collecte adresse, type de travaux, budget, disponibilités — vous rappelez préparé.",
+        "Ramasse l'adresse, le type de travaux, le budget et les disponibilités : vous rappelez préparé.",
     },
     {
       icon: "Filter",
@@ -61,13 +61,13 @@ const PAGE_PROPS = {
       icon: "RotateCcw",
       title: "Suivi automatique",
       description:
-        "Un prospect n'a pas booké? L'agent fait un suivi après 48h.",
+        "Un prospect n'a pas booké? L'agent fait un suivi après 48 h.",
     },
     {
       icon: "Calendar",
       title: "Rendez-vous d'estimation",
       description:
-        "Booke les visites sur site directement dans votre agenda.",
+        "Booke les visites sur place direct dans votre agenda.",
     },
     {
       icon: "MessageSquare",
@@ -91,12 +91,12 @@ const PAGE_PROPS = {
     {
       question: "J'ai 5 appels par jour max, est-ce que ça vaut la peine?",
       answer:
-        "Oui. Un seul contrat de plus gagné grâce à un appel bien pris peut changer la donne — et vous ne mesurez souvent pas combien d'appels vous manquez aujourd'hui. Réservez une courte démo pour voir si ça vaut la peine dans votre cas.",
+        "Oui. Un seul contrat de plus gagné grâce à un appel bien pris peut payer l'outil. Et bien du monde sous-estime le nombre d'appels qu'il manque. Une courte démo vous le dira vite.",
     },
     {
       question: "Est-ce que l'agent peut dispatcher les urgences la nuit?",
       answer:
-        "Oui. Vous définissez les critères d'urgence et le numéro de transfert. L'agent évalue et vous alerte si c'est critique.",
+        "Oui. Vous fixez les critères d'urgence et le numéro de transfert. L'agent évalue et vous alerte si c'est critique.",
     },
   ],
 };

@@ -11,7 +11,7 @@ const PAGE_PROPS = {
   badge: "Hôtels & hébergement",
   title: "L'agent vocal IA pour les hôtels et hébergements",
   subtitle:
-    "Réservations, disponibilités, questions fréquentes, conciergerie — votre agent accueille les clients 24/7 en français et en anglais.",
+    "Réservations, disponibilités, questions fréquentes, conciergerie : votre agent accueille les clients 24/7 en français et en anglais.",
   stats: [
     { value: "100%", label: "des appels répondus" },
     { value: "24/7", label: "bilingue automatique" },
@@ -21,13 +21,13 @@ const PAGE_PROPS = {
       icon: "PhoneMissed",
       title: "La réception a les mains pleines",
       description:
-        "Check-in, check-out, bagages, questions — la réception ne peut pas tout gérer. Les appels s'accumulent.",
+        "Check-in, check-out, bagages, questions : la réception peut pas tout gérer. Les appels s'accumulent.",
     },
     {
       icon: "Moon",
       title: "Appels la nuit et tôt le matin",
       description:
-        "Les voyageurs appellent à toute heure. Sans réceptionniste 24/7, vous perdez des réservations.",
+        "Les voyageurs appellent à toute heure. Sans réception 24/7, vous perdez des réservations.",
     },
   ],
   useCases: [
@@ -53,7 +53,7 @@ const PAGE_PROPS = {
       icon: "Sparkles",
       title: "Conciergerie",
       description:
-        "Suggestions de restaurants, activités, transport. Transfère aux demandes complexes.",
+        "Suggestions de restos, activités, transport. Transfère les demandes plus complexes.",
     },
   ],
   integrations: ["Opera", "Mews", "Cloudbeds", "Google Calendar", "Outlook"],
@@ -61,12 +61,12 @@ const PAGE_PROPS = {
     {
       question: "Est-ce que l'agent parle anglais?",
       answer:
-        "Oui. On configure l'agent en bilingue — il détecte la langue du client et répond en français ou en anglais selon la préférence.",
+        "Oui. On configure l'agent en bilingue : il détecte la langue du client et répond en français ou en anglais selon la préférence.",
     },
     {
       question: "Peut-il gérer les réservations en direct?",
       answer:
-        "Oui, si votre système de réservation est intégré. Sinon, l'agent collecte les infos et vous les transmet pour confirmation.",
+        "Oui, si votre système de réservation est intégré. Sinon, l'agent ramasse les infos et vous les transmet pour confirmation.",
     },
   ],
 };

@@ -11,7 +11,7 @@ const PAGE_PROPS = {
   badge: "Restaurants",
   title: "L'agent vocal IA pour les restaurants du Québec",
   subtitle:
-    "Réservations, commandes à emporter, heures d'ouverture, menu et allergènes — votre agent gère les appels pendant le rush.",
+    "Réservations, commandes pour emporter, heures d'ouverture, menu et allergènes : votre agent gère les appels pendant le rush.",
   stats: [
     { value: "40%", label: "plus de réservations" },
     { value: "0", label: "appel manqué aux heures de pointe" },
@@ -27,7 +27,7 @@ const PAGE_PROPS = {
       icon: "Clock",
       title: "Les appels s'accumulent",
       description:
-        "Réservations, commandes, questions sur les allergènes — tout arrive en même temps aux heures de pointe.",
+        "Réservations, commandes, questions sur les allergènes : tout arrive en même temps aux heures de pointe.",
     },
   ],
   useCases: [
@@ -35,7 +35,7 @@ const PAGE_PROPS = {
       icon: "CalendarCheck",
       title: "Réservations de tables",
       description:
-        "L'agent prend les réservations directement et les inscrit dans votre système.",
+        "L'agent prend les réservations direct et les inscrit dans votre système.",
     },
     {
       icon: "UtensilsCrossed",
@@ -53,7 +53,7 @@ const PAGE_PROPS = {
       icon: "Users",
       title: "Événements et groupes",
       description:
-        "Gère les demandes pour soupers de groupe, anniversaires et événements privés.",
+        "Gère les demandes pour les soupers de groupe, anniversaires et événements privés.",
     },
   ],
   integrations: ["OpenTable", "Resy", "Google Calendar", "Outlook", "Toast"],
@@ -66,7 +66,7 @@ const PAGE_PROPS = {
     {
       question: "Ça fonctionne pendant le rush du souper?",
       answer:
-        "Absolument. C'est justement là que l'agent excelle — il gère plusieurs appels en parallèle pendant que votre équipe sert les clients.",
+        "Absolument. C'est justement là que l'agent est utile : il gère plusieurs appels en parallèle pendant que votre équipe sert les clients.",
     },
   ],
 };

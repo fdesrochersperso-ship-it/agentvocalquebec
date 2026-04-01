@@ -7,21 +7,21 @@ import { StaggerContainer, fadeInUp } from "@/components/ui/stagger-container";
 const STEPS = [
   {
     number: 1,
-    title: "On branche",
+    title: "On le met en place",
     description:
-      "On configure votre agent vocal avec vos horaires, vos services, et vos préférences. Vous gardez votre numéro de téléphone — on branche un transfert d'appel, c'est tout.",
+      "On monte l'agent avec vos horaires, vos services et vos règles de transfert. Vous gardez votre numéro : on ajoute un transfert d'appel et c'est réglé.",
   },
   {
     number: 2,
-    title: "L'IA répond",
+    title: "L'agent répond",
     description:
-      "Chaque appel est pris en charge en moins de 2 secondes. L'IA répond aux questions fréquentes, prend les rendez-vous, et transfère les urgences à votre équipe. En québécois naturel.",
+      "Chaque appel est pris en charge en moins de 2 secondes. L'agent répond aux questions fréquentes, prend les rendez-vous et transfère les urgences. En québécois naturel.",
   },
   {
     number: 3,
-    title: "Vous recevez",
+    title: "Vous recevez le suivi",
     description:
-      "Résumé de chaque appel par courriel ou texto. Nouveaux rendez-vous directement dans votre agenda. Vous gardez le contrôle total.",
+      "Résumé de chaque appel par courriel ou texto. Les nouveaux rendez-vous entrent dans votre agenda. Vous gardez le plein contrôle.",
   },
 ] as const;
 
@@ -37,7 +37,7 @@ export function SolutionSection() {
           variants={fadeInUp}
           className="font-display text-h1 font-normal text-primary leading-[1.15]"
         >
-          Comment ça marche en 3 étapes
+          Comment ça marche, en 3 étapes
         </motion.h2>
 
         {/* Steps: horizontal on desktop with connecting line */}

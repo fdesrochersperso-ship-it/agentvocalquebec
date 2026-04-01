@@ -11,19 +11,19 @@ const PAIN_POINTS = [
     icon: PhoneMissed,
     title: "Appels manqués",
     description:
-      "35% des appels en clinique dentaire ne sont jamais répondus. En construction, c'est pire — les entrepreneurs sont sur le chantier.",
+      "35 % des appels en clinique dentaire restent sans réponse. En construction, c'est encore pire : le monde est sur le chantier.",
   },
   {
     icon: DollarSign,
     title: "Revenus perdus",
     description:
-      "Un appel manqué en clinique dentaire, c'est en moyenne 500$ de soins non réalisés. Un appel de soumission en plomberie, c'est un contrat de 2 000$ à 15 000$.",
+      "Un appel manqué en clinique dentaire, c'est souvent 500 $ de soins qui ne se font pas. Un appel de soumission en plomberie, ça peut être un contrat de 2 000 $ à 15 000 $.",
   },
   {
     icon: Clock,
     title: "Heures de fermeture",
     description:
-      "40% des appels arrivent en dehors des heures d'ouverture. Le soir, la fin de semaine, les jours fériés. Zéro réponse = zéro revenu.",
+      "40 % des appels entrent en dehors des heures d'ouverture. Le soir, la fin de semaine, les jours fériés. Si personne répond, l'argent rentre pas.",
   },
 ] as const;
 
@@ -47,15 +47,15 @@ export function ProblemSection() {
             className="flex-1 space-y-6 lg:max-w-[45%]"
           >
             <p className="text-[1.125rem] leading-[1.6] text-text-primary">
-              Votre réceptionniste est au téléphone avec un patient. Deux
-              autres lignes sonnent. Une personne raccroche et appelle votre
-              concurrent. L'autre laisse un message vocal que personne n'écoute
+              Votre réceptionniste est déjà au téléphone avec un patient. Deux
+              autres lignes sonnent. Une personne raccroche et appelle
+              ailleurs. L&apos;autre laisse un message que personne n&apos;écoutera
               avant demain matin.
             </p>
             <p className="text-[1.125rem] leading-[1.6] text-text-primary">
-              Ça arrive tous les jours. Et chaque appel manqué, c'est un
-              rendez-vous perdu, un client frustré, ou un contrat qui va
-              ailleurs.
+              Ça arrive tous les jours. Et chaque appel manqué, c&apos;est un
+              rendez-vous perdu, un client frustré ou un contrat qui vous
+              glisse entre les doigts.
             </p>
           </motion.div>
 

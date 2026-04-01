@@ -11,7 +11,7 @@ const PAGE_PROPS = {
   badge: "Assurances",
   title: "L'agent vocal IA pour les courtiers et cabinets d'assurance",
   subtitle:
-    "Demandes de soumissions, réclamations, renouvellements — votre agent qualifie et dirige chaque appel.",
+    "Demandes de soumissions, réclamations, renouvellements : votre agent qualifie et dirige chaque appel.",
   stats: [
     { value: "70%", label: "des appels automatisés" },
     { value: "45%", label: "traitement plus rapide" },
@@ -21,13 +21,13 @@ const PAGE_PROPS = {
       icon: "PhoneMissed",
       title: "Les lignes débordent",
       description:
-        "Sinistres, renouvellements, demandes de soumission — votre équipe n'arrive plus à tout gérer.",
+        "Sinistres, renouvellements, demandes de soumission : votre équipe n'arrive plus à tout gérer.",
     },
     {
       icon: "Clock",
       title: "Qualification manuelle = temps perdu",
       description:
-        "Trop de temps passé à trier les appels avant de les diriger au bon courtier.",
+        "Trop de temps passé à trier les appels avant de les envoyer au bon courtier.",
     },
   ],
   useCases: [
@@ -47,13 +47,13 @@ const PAGE_PROPS = {
       icon: "RotateCcw",
       title: "Renouvellements de polices",
       description:
-        "Rappels automatiques avant échéance, prise de rendez-vous pour renouvellement.",
+        "Rappels automatiques avant échéance, prise de rendez-vous pour le renouvellement.",
     },
     {
       icon: "Filter",
       title: "Qualification de prospects",
       description:
-        "Pose les bonnes questions et dirige chaque appel vers le bon courtier ou service.",
+        "Pose les bonnes questions et dirige chaque appel vers le bon courtier ou le bon service.",
     },
   ],
   integrations: ["Epic", "Applied", "Google Calendar", "Outlook", "HubSpot"],
@@ -61,12 +61,12 @@ const PAGE_PROPS = {
     {
       question: "Est-ce que l'agent respecte la confidentialité des dossiers?",
       answer:
-        "Oui. L'agent ne partage jamais de détails sensibles. Il collecte et qualifie, puis transfère à votre équipe. Données hébergées au Canada, conformes à la Loi 25.",
+        "Oui. L'agent ne partage jamais de détails sensibles. Il collecte, qualifie, puis transfère à votre équipe. Données hébergées au Canada, conformes à la Loi 25.",
     },
     {
       question: "Peut-il gérer les urgences sinistres?",
       answer:
-        "Oui. Vous définissez les critères d'urgence. L'agent priorise et transfère immédiatement les cas critiques.",
+        "Oui. Vous fixez les critères d'urgence. L'agent priorise et transfère immédiatement les cas critiques.",
     },
   ],
 };

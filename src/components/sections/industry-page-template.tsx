@@ -102,14 +102,14 @@ export interface IndustryPageProps {
 }
 
 const DEFAULT_SECTION_TITLES = {
-  painPointsTitle: "Les défis de votre secteur",
-  useCasesTitle: "Ce que notre agent fait pour vous",
+  painPointsTitle: "Les réalités de votre secteur",
+  useCasesTitle: "Ce que l'agent prend en charge",
   integrationsTitle: "Intégrations",
-  integrationsNote: "Votre logiciel n'est pas listé? Contactez-nous.",
+  integrationsNote: "Votre logiciel n'est pas là? On s'ajuste.",
   faqTitle: "Questions fréquentes",
-  calculatorTitle: "Combien vous coûtent vos appels manqués?",
+  calculatorTitle: "Combien vos appels manqués vous coûtent pour vrai?",
   calculatorSliderLabel: "Appels manqués par semaine",
-  calculatorCtaText: "Arrêtez de perdre de l'argent",
+  calculatorCtaText: "Arrêtez d'en laisser passer",
 } as const;
 
 export function IndustryPageTemplate({
@@ -321,11 +321,11 @@ export function IndustryPageTemplate({
               </div>
               <div className="rounded-xl border border-border bg-surface/50 p-6">
                 <p className="font-body text-[1.125rem] text-text-primary">
-                  Ça représente environ{" "}
+                  Ça vous coûte autour de{" "}
                   <span className="font-mono text-stat font-bold text-accent">
                     {monthlyLoss.toLocaleString("fr-CA")}$
                   </span>{" "}
-                  de revenus perdus par mois.
+                  en revenus perdus par mois.
                 </p>
               </div>
               <p className="text-[0.875rem] leading-[1.4] text-text-muted">

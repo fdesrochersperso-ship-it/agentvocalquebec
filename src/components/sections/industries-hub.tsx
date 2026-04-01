@@ -30,7 +30,7 @@ const FEATURED_INDUSTRIES = [
     icon: Stethoscope,
     title: "Cliniques dentaires",
     description:
-      "Cliniques, dentistes — automatisez la prise de rendez-vous, le triage téléphonique et les rappels patients 24/7.",
+      "Prise de rendez-vous, triage téléphonique et rappels patients 24/7, branchés sur vos outils de clinique.",
     badges: ["35% moins d'appels manqués", "500$+ sauvés par appel"],
     href: "/industries/cliniques-dentaires",
   },
@@ -38,7 +38,7 @@ const FEATURED_INDUSTRIES = [
     icon: Sparkles,
     title: "Médico-esthétique",
     description:
-      "Botox, laser, fillers — consultations, questions traitements, suivi post-traitement. Confidentialité totale.",
+      "Consultations, questions sur les traitements, suivis. Le tout avec le bon niveau de discrétion.",
     badges: ["2 000$+ par rendez-vous", "Zéro concurrence IA au QC"],
     href: "/industries/medico-esthetique",
   },
@@ -46,7 +46,7 @@ const FEATURED_INDUSTRIES = [
     icon: HardHat,
     title: "Construction & métiers",
     description:
-      "Plomberie, HVAC, électriciens, rénovation — dispatch d'urgence, prise de soumissions et filtrage d'appels.",
+      "Dispatch d'urgence, soumissions et filtrage d'appels pendant que vous êtes sur le chantier.",
     badges: ["77% pénurie main-d'œuvre", "126 000$ perdus/an en appels manqués"],
     href: "/industries/construction",
   },
@@ -54,7 +54,7 @@ const FEATURED_INDUSTRIES = [
     icon: Car,
     title: "Garages automobiles",
     description:
-      "Rendez-vous d'entretien, statut des réparations, rappels de service — pendant que votre équipe travaille.",
+      "Rendez-vous d'entretien, statut des réparations et rappels de service pendant que l'atelier roule.",
     badges: ["50% plus de rendez-vous", "Zéro attente téléphonique"],
     href: "/industries/garages-automobiles",
   },
@@ -64,13 +64,13 @@ const ALL_INDUSTRIES = [
   {
     icon: UtensilsCrossed,
     title: "Restaurants",
-    description: "Réservations, commandes à emporter, horaires.",
+    description: "Réservations, commandes pour emporter, horaires.",
     href: "/industries/restaurants",
   },
   {
     icon: Shield,
     title: "Assurances",
-    description: "Sinistres, renseignements, prise de rendez-vous.",
+    description: "Sinistres, infos de base et prise de rendez-vous.",
     href: "/industries/assurances",
   },
   {
@@ -82,7 +82,7 @@ const ALL_INDUSTRIES = [
   {
     icon: Home,
     title: "Immobilier",
-    description: "Visites, renseignements, prise de rendez-vous.",
+    description: "Visites, infos sur les propriétés, prise de rendez-vous.",
     href: "/industries/immobilier",
   },
   {
@@ -106,7 +106,7 @@ const ALL_INDUSTRIES = [
   {
     icon: Hotel,
     title: "Hôtels & hébergement",
-    description: "Réservations, disponibilités, renseignements.",
+    description: "Réservations, disponibilités, questions des clients.",
     href: "/industries/hotellerie",
   },
   {
@@ -124,13 +124,14 @@ export function IndustriesHubPage() {
       <section className="pt-8 pb-16 lg:pt-12 lg:pb-20">
         <div className="mx-auto max-w-[1200px] px-6 text-center">
           <AnimateOnScroll>
-            <Badge className="mb-6">Solutions par industrie</Badge>
+            <Badge className="mb-6">Solutions par secteur</Badge>
             <h1 className="font-display text-3xl font-normal text-primary leading-[1.1] md:text-hero">
-              Un agent vocal IA adapté à votre industrie
+              Un agent vocal IA adapté à votre réalité
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-[1.125rem] leading-[1.6] text-text-secondary">
-              Chaque secteur a ses défis. Notre agent s'adapte à vos processus,
-              votre vocabulaire et vos besoins.
+              Chaque secteur a sa façon de parler, ses urgences et ses
+              contraintes. L&apos;agent s&apos;ajuste à vos façons de faire, à votre
+              vocabulaire et à votre clientèle.
             </p>
           </AnimateOnScroll>
         </div>
@@ -200,7 +201,7 @@ export function IndustriesHubPage() {
               Toutes nos industries
             </h2>
             <p className="mt-4 text-[1.125rem] leading-[1.6] text-text-secondary">
-              Notre agent vocal IA s'adapte à de nombreux secteurs d'activité
+              Notre agent vocal IA s&apos;adapte à un paquet de secteurs de service.
             </p>
           </motion.div>
 
@@ -240,14 +241,14 @@ export function IndustriesHubPage() {
       <SectionWrapper>
         <AnimateOnScroll className="flex flex-col items-center gap-6 text-center">
           <h2 className="font-display text-h2 font-normal text-primary leading-[1.2]">
-            Votre industrie n'est pas listée?
+            Votre secteur n&apos;est pas listé?
           </h2>
           <p className="max-w-2xl text-[1.125rem] leading-[1.6] text-text-secondary">
-            Notre agent vocal peut être adapté pour n'importe quelle entreprise
-            de services. Contactez-nous pour discuter de votre cas.
+            Notre agent peut s&apos;adapter à pas mal n&apos;importe quelle entreprise de
+            service. Parlez-nous de votre réalité.
           </p>
           <Button href="/demo-gratuite" variant="primary" size="lg">
-            Contactez-nous
+            Parlez-nous-en
           </Button>
         </AnimateOnScroll>
       </SectionWrapper>

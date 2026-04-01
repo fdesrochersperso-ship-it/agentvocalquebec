@@ -11,7 +11,7 @@ const PAGE_PROPS = {
   badge: "Immobilier",
   title: "L'agent vocal IA pour l'immobilier",
   subtitle:
-    "Demandes de visites, qualification acheteurs/vendeurs, informations propriétés — votre agent ne manque aucune opportunité.",
+    "Demandes de visites, qualification des acheteurs et vendeurs, infos sur les propriétés : votre agent ne manque aucune occasion.",
   stats: [
     { value: "3x", label: "plus de visites planifiées" },
     { value: "24/7", label: "qualification automatique" },
@@ -21,13 +21,13 @@ const PAGE_PROPS = {
       icon: "PhoneMissed",
       title: "Les leads appellent quand vous êtes en visite",
       description:
-        "Un acheteur sérieux appelle à 18h. Vous êtes en show. Il laisse un message... et appelle un autre courtier.",
+        "Un acheteur sérieux appelle à 18 h. Vous êtes en visite. Il laisse un message et appelle un autre courtier.",
     },
     {
       icon: "Clock",
       title: "Qualifier chaque lead prend du temps",
       description:
-        "Budget, préapprobation, délais — autant de questions à poser avant de booker une visite.",
+        "Budget, préapprobation, délais : autant de questions à poser avant de booker une visite.",
     },
   ],
   useCases: [
@@ -39,21 +39,21 @@ const PAGE_PROPS = {
     },
     {
       icon: "Filter",
-      title: "Qualification acheteurs-vendeurs",
+      title: "Qualification des acheteurs et vendeurs",
       description:
         "Pose les questions clés : budget, préapprobation, délais. Vous recevez des leads qualifiés.",
     },
     {
       icon: "Search",
-      title: "Informations propriétés",
+      title: "Infos sur les propriétés",
       description:
-        "Donne les infos de base sur les propriétés en vedette — prix, chambres, quartier.",
+        "Donne les infos de base sur les propriétés en vedette : prix, chambres, quartier.",
     },
     {
       icon: "Calendar",
       title: "Prise de rendez-vous",
       description:
-        "Evaluations, signatures, rencontres — tout booké automatiquement dans votre agenda.",
+        "Évaluations, signatures, rencontres : tout booké automatiquement dans votre agenda.",
     },
   ],
   integrations: ["MLS", "Google Calendar", "Outlook", "Follow Up Boss", "BombBomb"],
@@ -61,12 +61,12 @@ const PAGE_PROPS = {
     {
       question: "Est-ce que l'agent peut donner des prix sur les propriétés?",
       answer:
-        "Oui, selon ce que vous configurez. Vous décidez quelles infos sont partagées par téléphone et lesquelles nécessitent une visite.",
+        "Oui, selon ce que vous configurez. Vous décidez quelles infos sont données au téléphone et lesquelles demandent une visite.",
     },
     {
       question: "Les leads de nuit et fin de semaine — ça vaut la peine?",
       answer:
-        "Absolument. Beaucoup d'acheteurs cherchent en dehors des heures de bureau. L'agent qualifie 24/7 et vous transmet les leads chauds.",
+        "Absolument. Beaucoup d'acheteurs cherchent en dehors des heures de bureau. L'agent qualifie 24/7 et vous transfère les leads chauds.",
     },
   ],
 };

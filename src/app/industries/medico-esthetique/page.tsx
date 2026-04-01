@@ -11,7 +11,7 @@ const PAGE_PROPS = {
   badge: "Médico-esthétique",
   title: "L'agent vocal IA pour les cliniques médico-esthétiques",
   subtitle:
-    "Consultations Botox, laser, fillers, micro-needling — votre agent répond aux questions, booke les rendez-vous et assure la confidentialité totale.",
+    "Consultations Botox, laser, fillers, micro-needling : votre agent répond aux questions, booke les rendez-vous et garde ça confidentiel.",
   stats: [
     { value: "2 000$+", label: "valeur moyenne d'un traitement" },
     { value: "0", label: "concurrent IA au QC pour ce segment" },
@@ -22,13 +22,13 @@ const PAGE_PROPS = {
       icon: "Clock",
       title: "Clientèle exigeante, disponibilité limitée",
       description:
-        "Vos clientes veulent des réponses immédiates. Si elles n'ont pas de réponse, elles appellent ailleurs.",
+        "Vos clientes veulent des réponses tout de suite. Si elles n'en ont pas, elles appellent ailleurs.",
     },
     {
       icon: "Lock",
       title: "Questions sensibles par téléphone",
       description:
-        "Traitements, prix, contre-indications. L'information doit être précise et discrète.",
+        "Traitements, prix, contre-indications. L'information doit rester précise et discrète.",
     },
     {
       icon: "Moon",
@@ -42,13 +42,13 @@ const PAGE_PROPS = {
       icon: "Sparkles",
       title: "Consultations initiales",
       description:
-        "Botox, laser, fillers, micro-needling — l'agent recueille les infos et booke la consultation.",
+        "Botox, laser, fillers, micro-needling : l'agent recueille les infos et booke la consultation.",
     },
     {
       icon: "CircleDollarSign",
       title: "Questions traitements et prix",
       description:
-        "Vous décidez quels prix sont partagés par téléphone et lesquels nécessitent une consultation.",
+        "Vous décidez quels prix se donnent au téléphone et lesquels demandent une consultation.",
     },
     {
       icon: "Heart",
@@ -60,7 +60,7 @@ const PAGE_PROPS = {
       icon: "EyeOff",
       title: "Confidentialité totale",
       description:
-        "Les textos de confirmation disent 'rendez-vous confirmé' — jamais les détails du traitement.",
+        "Les textos de confirmation disent seulement 'rendez-vous confirmé', jamais le détail du traitement.",
     },
   ],
   integrations: [
@@ -79,12 +79,12 @@ const PAGE_PROPS = {
     {
       question: "Est-ce discret pour les traitements esthétiques?",
       answer:
-        "Absolument. L'agent ne mentionne jamais les détails dans les textos ou courriels — seulement 'rendez-vous confirmé' avec la date et l'heure.",
+        "Absolument. L'agent ne mentionne jamais les détails dans les textos ou courriels : seulement 'rendez-vous confirmé' avec la date et l'heure.",
     },
     {
       question: "Peut-il donner des prix?",
       answer:
-        "Oui, selon ce que vous configurez. Vous décidez quels prix sont partagés et lesquels nécessitent une consultation en personne.",
+        "Oui, selon ce que vous configurez. Vous décidez quels prix sont partagés et lesquels demandent une consultation en personne.",
     },
   ],
 };

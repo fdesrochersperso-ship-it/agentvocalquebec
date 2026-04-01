@@ -11,7 +11,7 @@ const PAGE_PROPS = {
   badge: "Services professionnels",
   title: "L'agent vocal IA pour les professionnels et consultants",
   subtitle:
-    "Comptables, consultants, notaires — votre agent filtre les appels, prend les rendez-vous et gère votre agenda.",
+    "Comptables, consultants, notaires : votre agent filtre les appels, prend les rendez-vous et gère votre agenda.",
   stats: [
     { value: "60%", label: "moins d'interruptions" },
     { value: "100%", label: "des appels pris en charge" },
@@ -21,13 +21,13 @@ const PAGE_PROPS = {
       icon: "PhoneCall",
       title: "Chaque appel coupe votre concentration",
       description:
-        "En réunion, en préparation de dossier — le téléphone sonne et vous dérange au pire moment.",
+        "En réunion, en préparation de dossier : le téléphone sonne et vous dérange au pire moment.",
     },
     {
       icon: "PhoneMissed",
       title: "Les vrais clients passent entre les mailles",
       description:
-        "Sans filtrage, vous perdez du temps avec des vendeurs et des appels non pertinents.",
+        "Sans filtrage, vous perdez du temps avec des vendeurs et des appels qui valent pas votre attention.",
     },
   ],
   useCases: [
@@ -53,7 +53,7 @@ const PAGE_PROPS = {
       icon: "Calendar",
       title: "Gestion d'agenda",
       description:
-        "Confirme les rendez-vous, gère les annulations et les reports.",
+        "Confirme les rendez-vous, gère les annulations et les déplacements.",
     },
   ],
   integrations: ["Google Calendar", "Outlook", "Calendly", "Acuity", "HubSpot"],
@@ -66,7 +66,7 @@ const PAGE_PROPS = {
     {
       question: "Mon agenda est complexe — plusieurs professionnels?",
       answer:
-        "On s'intègre avec la plupart des systèmes de rendez-vous. Vous définissez les règles (qui, quand, quel type de consultation).",
+        "On se branche avec la plupart des systèmes de rendez-vous. Vous fixez les règles : qui, quand, quel type de consultation.",
     },
   ],
 };

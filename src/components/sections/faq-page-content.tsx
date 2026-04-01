@@ -25,7 +25,7 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Est-ce que les gens vont savoir que c'est une IA?",
         answer:
-          "La voix est naturelle et les conversations sont fluides. Certains le remarqueront, mais l'important c'est que leur appel est pris en charge immédiatement et professionnellement.",
+          "La voix sonne naturelle et la conversation suit bien. Certaines personnes vont s'en rendre compte, d'autres non. L'important, c'est qu'elles se font répondre tout de suite et comme du monde.",
       },
       {
         question: "Est-ce que je garde mon numéro de téléphone?",
@@ -35,17 +35,17 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Qu'est-ce qui arrive si l'IA ne sait pas répondre?",
         answer:
-          "Elle transfère l'appel à vous ou à un membre de votre équipe. Vous définissez les règles.",
+          "Elle vous transfère l'appel, ou elle le passe à quelqu'un de votre équipe. C'est vous qui fixez les règles.",
       },
       {
-        question: "Ça prend combien de temps pour être opérationnel?",
+        question: "Ça prend combien de temps avant d'être en ligne?",
         answer:
-          "La configuration de base prend 30 minutes. On peut être live en 48 heures.",
+          "La mise en place de base prend une trentaine de minutes. En général, on peut être en ligne en 48 heures.",
       },
       {
         question: "C'est quoi la différence avec un service de réponse traditionnel?",
         answer:
-          "Un service humain coûte 2-5x plus cher, a des heures limitées, et peut pas prendre 5 appels en même temps. Notre agent est disponible 24/7 et gère des appels illimités simultanément.",
+          "Un service humain coûte 2 à 5 fois plus cher, a des heures limitées et ne peut pas prendre plusieurs appels d'un coup. Notre agent répond 24/7 et peut en gérer plusieurs en même temps.",
       },
     ],
   },
@@ -55,12 +55,12 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Mes données sont où?",
         answer:
-          "Au Canada. On est conforme à la Loi 25 du Québec. Vos données ne sortent jamais du pays.",
+          "Au Canada. On est conformes à la Loi 25 du Québec et vos données ne sortent pas du pays.",
       },
       {
         question: "Est-ce conforme à la Loi 25?",
         answer:
-          "Oui. On informe les appelants, on permet de contester les décisions automatisées, et les données sont hébergées au Canada.",
+          "Oui. On informe les appelants, on permet de contester les décisions automatisées et les données sont hébergées au Canada.",
       },
       {
         question: "Est-ce que les appels sont enregistrés?",
@@ -75,27 +75,27 @@ const FAQ_CATEGORIES: FaqCategory[] = [
       {
         question: "Y a-tu des frais de mise en service?",
         answer:
-          "Non. La configuration initiale est incluse — on vous accompagne pour être opérationnel sans frais de démarrage cachés.",
+          "Non. La mise en place est incluse. On vous accompagne pour que ça roule, sans frais cachés au départ.",
       },
       {
         question: "Je suis engagé pour combien de temps?",
         answer:
-          "Aucun engagement long terme. Vous discutez des modalités avec nous lors de la démo; en général c'est flexible, mois par mois, selon votre situation.",
+          "Pas d'engagement lourd. On discute de la formule pendant la démo; en général, c'est flexible et mois par mois.",
       },
       {
         question: "C'est quoi une minute d'appel?",
         answer:
-          "Une minute d'appel, c'est du moment où l'agent décroche jusqu'à la fin de la conversation. Les silences courts comptent, pas le temps de sonnerie.",
+          "Une minute d'appel, c'est le temps entre le moment où l'agent répond et la fin de la conversation. Les petits silences comptent, pas la sonnerie.",
       },
       {
         question: "Comment ça fonctionne si mon volume d'appels augmente?",
         answer:
-          "Les modalités (forfait, utilisation, facturation) vous sont présentées clairement lors de la démo et dans votre entente. Vous voyez l'usage en temps réel dans le tableau de bord — pas de mauvaise surprise.",
+          "Les modalités vous sont présentées clairement pendant la démo et dans votre entente. Vous voyez l'usage en temps réel dans le tableau de bord, sans mauvaise surprise.",
       },
       {
         question: "Est-ce qu'on peut ajuster l'offre plus tard?",
         answer:
-          "Oui. On adapte souvent la solution quand votre volume ou vos besoins changent. On en parle lors de votre démo ou avec votre contact chez Agent Vocal Québec.",
+          "Oui. Si votre volume monte ou que vos besoins changent, on ajuste la solution avec vous.",
       },
     ],
   },
@@ -173,10 +173,10 @@ export function FaqPageContent() {
       <SectionWrapper className="pt-12 pb-8 lg:pt-16 lg:pb-12">
         <AnimateOnScroll className="flex flex-col items-center gap-6 text-center">
           <h2 className="font-display text-h2 font-normal text-primary leading-[1.2]">
-            Vous avez d'autres questions?
+            Vous avez d&apos;autres questions?
           </h2>
           <p className="text-[1.125rem] leading-[1.6] text-text-secondary">
-            Contactez-nous.
+            Écrivez-nous ou réservez une démo.
           </p>
           <Button href="/demo-gratuite" variant="primary" size="lg">
             Réserver une démo

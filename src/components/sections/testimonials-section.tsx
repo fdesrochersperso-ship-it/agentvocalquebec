@@ -15,14 +15,14 @@ const TESTIMONIALS = [
   },
   {
     quote:
-      "J'étais sur un chantier et je pouvais pas répondre. L'IA a booké trois soumissions pendant que je travaillais.",
+      "J'étais sur un chantier et je pouvais pas répondre. L'agent a booké trois soumissions pendant que je travaillais.",
     name: "Marc-André Bouchard",
     title: null,
     company: "Plomberie MAB",
   },
   {
     quote:
-      "Mes clientes appellent pour des infos sur les traitements. L'IA répond parfaitement et booke les consultations.",
+      "Mes clientes appellent pour des infos sur les traitements. L'agent répond bien et booke les consultations.",
     name: "Stéphanie Gagnon",
     title: null,
     company: "Clinique Esthétique Lumière",
@@ -48,7 +48,7 @@ export function TestimonialsSection() {
                   className="font-display text-6xl text-accent/20 leading-none"
                   aria-hidden
                 >
-                  "
+                  &quot;
                 </span>
                 <blockquote className="mt-2 flex-1 font-body text-[1.125rem] italic leading-[1.6] text-text-primary">
                   {testimonial.quote}

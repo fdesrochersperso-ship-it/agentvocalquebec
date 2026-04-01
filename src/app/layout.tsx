@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s | Agent Vocal Québec",
   },
   description:
-    "Agent vocal IA qui répond au téléphone en québécois authentique, 24/7. Prise de rendez-vous, questions fréquentes, transfert d'urgences. Pour cliniques et entrepreneurs du Québec.",
+    "Agent vocal IA qui répond au téléphone en québécois naturel, 24/7. Rendez-vous, questions fréquentes et transfert d'urgences pour les entreprises du Québec.",
   openGraph: {
     locale: "fr_CA",
   },

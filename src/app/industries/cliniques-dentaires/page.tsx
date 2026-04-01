@@ -10,9 +10,9 @@ export const metadata = {
 const PAGE_PROPS = {
   badge: "Cliniques dentaires",
   title:
-    "L'agent vocal IA conçu pour les cliniques dentaires du Québec",
+    "L'agent vocal IA pensé pour les cliniques dentaires du Québec",
   subtitle:
-    "Prise de rendez-vous, questions d'assurance, rappels, confirmations — votre agent répond 24/7 pendant que votre équipe soigne.",
+    "Prise de rendez-vous, questions d'assurance, rappels, confirmations : votre agent répond 24/7 pendant que votre équipe soigne.",
   stats: [
     { value: "35%", label: "des appels manqués en clinique" },
     { value: "500$+", label: "de revenus perdus par appel" },
@@ -23,13 +23,13 @@ const PAGE_PROPS = {
       icon: "PhoneMissed",
       title: "35% des appels jamais répondus",
       description:
-        "Votre équipe est occupée avec les patients. Les lignes sonnent dans le vide.",
+        "Votre équipe est avec les patients. Les lignes sonnent dans le vide.",
     },
     {
       icon: "DollarSign",
       title: "500$+ perdus par appel manqué",
       description:
-        "Un nettoyage, une couronne, un traitement de canal — chaque appel manqué est un soin non réalisé.",
+        "Un nettoyage, une couronne, un traitement de canal : chaque appel manqué, c'est un soin qui ne se fera pas.",
     },
     {
       icon: "CalendarX",
@@ -43,7 +43,7 @@ const PAGE_PROPS = {
       icon: "CalendarCheck",
       title: "Prise de rendez-vous automatique",
       description:
-        "Nettoyage, urgence, nouveau patient — l'agent booke directement dans votre agenda.",
+        "Nettoyage, urgence, nouveau patient : l'agent booke direct dans votre agenda.",
     },
     {
       icon: "Shield",
@@ -67,7 +67,7 @@ const PAGE_PROPS = {
       icon: "UserPlus",
       title: "Accueil nouveaux patients",
       description:
-        "Collecte des infos de base avant le premier rendez-vous.",
+        "Ramasse les infos de base avant le premier rendez-vous.",
     },
     {
       icon: "PhoneForwarded",
@@ -95,7 +95,7 @@ const PAGE_PROPS = {
     {
       question: "Est-ce compatible avec mon logiciel de clinique?",
       answer:
-        "On s'intègre avec Dentitek, Progident, ABELDent et la plupart des PMS dentaires. Si votre logiciel n'est pas listé, contactez-nous.",
+        "On se branche à Dentitek, Progident, ABELDent et à la plupart des PMS dentaires. Si votre logiciel n'est pas là, parlez-nous-en.",
     },
   ],
 };

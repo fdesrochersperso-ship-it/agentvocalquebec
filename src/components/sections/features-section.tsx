@@ -18,57 +18,57 @@ import { StaggerContainer, fadeInUp } from "@/components/ui/stagger-container";
 const FEATURES = [
   {
     icon: Mic,
-    title: "Parle en québécois authentique",
+    title: "Parle en québécois naturel",
     description:
-      "Pas du français de France. Pas du Radio-Canada poli. Notre IA parle comme vos employés parlent : naturel, chaleureux, professionnel. Vos clients se sentent chez eux.",
+      "Pas du français de France. Pas une voix trop lisse. L'agent parle comme votre monde : naturel, chaleureux et crédible.",
   },
   {
     icon: Link2,
-    title: "S'intègre à vos logiciels existants",
+    title: "Se branche à vos outils actuels",
     description:
-      "On s'intègre avec les systèmes que vous utilisez déjà. Dentitek, Cliniciel, Medesync, Google Calendar, et plus. Pas besoin de changer vos habitudes.",
+      "On se branche sur les systèmes que vous utilisez déjà. Dentitek, Cliniciel, Medesync, Google Calendar et plus. Pas besoin de repartir à zéro.",
   },
   {
     icon: Shield,
-    title: "Conforme à la Loi 25 et la Loi 96",
+    title: "Conforme aux lois du Québec",
     description:
-      "Loi 25 sur la vie privée. Loi 96 sur la langue française. Données hébergées au Canada. On respecte les règles, vous dormez tranquille.",
+      "Loi 25, Loi 96, données hébergées au Canada. Rien de flou, rien dans une zone grise.",
   },
   {
     icon: PhoneForwarded,
-    title: "Transfère l'appel à votre équipe si nécessaire",
+    title: "Transfère à votre équipe au besoin",
     description:
-      "L'IA sait quand passer l'appel à un humain. Urgences médicales, situations délicates, demandes complexes — votre équipe prend le relais en temps réel.",
+      "Quand ça prend un humain, l'agent passe l'appel à la bonne personne. Urgences, situations délicates, demandes complexes : votre équipe prend le relais tout de suite.",
   },
   {
     icon: Users,
     title: "Gère plusieurs appels en même temps",
     description:
-      "Cinq patients appellent en même temps? Les cinq sont pris en charge. Zéro attente, zéro musique d'ascenseur, zéro « veuillez patienter ».",
+      "Cinq personnes appellent en même temps? Les cinq se font répondre. Pas d'attente, pas de boîte vocale, pas de « veuillez patienter ».",
   },
   {
     icon: FileText,
     title: "Résume chaque appel automatiquement",
     description:
-      "Chaque appel est résumé et envoyé par courriel. Vous savez exactement ce qui se passe sans écouter les enregistrements un par un.",
+      "Chaque appel vous arrive en résumé par courriel. Vous voyez ce qui s'est dit sans réécouter chaque appel un par un.",
   },
   {
     icon: Languages,
     title: "Bilingue français-anglais",
     description:
-      "L'agent détecte la langue de l'appelant et s'adapte automatiquement.",
+      "L'agent passe du français à l'anglais selon la personne au bout de la ligne.",
   },
   {
     icon: Clock,
     title: "Disponibilité 24/7",
     description:
-      "Jour, soir, nuit, fériés. Votre agent ne dort jamais et ne prend pas de vacances.",
+      "Jour, soir, nuit, fin de semaine, fériés. L'agent est là quand vos clients appellent.",
   },
   {
     icon: Mic,
-    title: "50+ voix disponibles",
+    title: "Plus de 50 voix disponibles",
     description:
-      "Choisissez le ton et la voix qui représentent le mieux votre entreprise.",
+      "Choisissez le ton et la voix qui collent vraiment à votre entreprise.",
   },
 ] as const;
 

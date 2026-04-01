@@ -30,33 +30,33 @@ import { cn } from "@/lib/utils";
 const FEATURES = [
   {
     icon: Phone,
-    title: "Répond automatiquement aux appels entrants",
+    title: "Répond à tous les appels qui entrent",
     description:
-      "L'agent répond professionnellement à tous vos appels 24/7 dans une langue parfaitement adaptée.",
+      "L'agent répond 24/7 avec un ton naturel, sans faire attendre le monde.",
   },
   {
     icon: CalendarCheck,
-    title: "Planifie des rendez-vous directement",
+    title: "Prend les rendez-vous directement",
     description:
-      "Synchronisation automatique avec votre calendrier pour éviter les doublons et erreurs.",
+      "Il se synchronise avec votre calendrier pour éviter les doublons et les erreurs.",
   },
   {
     icon: UserCheck,
-    title: "Qualifie les prospects selon vos critères",
+    title: "Qualifie les prospects à votre façon",
     description:
-      "L'agent pose vos questions de qualification pour filtrer les appels et prioriser les meilleurs prospects.",
+      "L'agent pose vos vraies questions de qualification pour filtrer et prioriser les bons appels.",
   },
   {
     icon: Mail,
-    title: "Envoie des confirmations et suivis",
+    title: "Envoie confirmations et suivis",
     description:
-      "Communications post-appel automatiques par courriel ou texto.",
+      "Courriels ou textos automatiques après l'appel, selon vos règles.",
   },
   {
     icon: Plug,
-    title: "S'intègre à votre CRM existant",
+    title: "Se branche à votre CRM",
     description:
-      "Compatible avec Zoho, HubSpot, Pipedrive et autres pour centraliser vos données client.",
+      "Zoho, HubSpot, Pipedrive et d'autres outils pour garder vos infos au même endroit.",
   },
   {
     icon: Languages,
@@ -66,21 +66,21 @@ const FEATURES = [
   },
   {
     icon: PhoneForwarded,
-    title: "Transfère l'appel si nécessaire",
+    title: "Transfère l'appel au besoin",
     description:
-      "L'agent peut transférer vers votre équipe quand le client le demande ou selon vos règles.",
+      "Quand ça prend un humain, l'agent passe l'appel à la bonne personne selon vos règles.",
   },
   {
     icon: Mic,
-    title: "Parle naturellement",
+    title: "Parle comme du monde d'ici",
     description:
-      "Conversation naturelle et fluide avec intonation, pauses et réactions authentiques.",
+      "Une conversation fluide, avec le bon ton, les bonnes pauses et un français qui sonne Québec.",
   },
   {
     icon: UserSearch,
-    title: "Vérifie l'identité et collecte les infos",
+    title: "Vérifie l'identité et ramasse l'info",
     description:
-      "L'agent confirme l'identité de l'appelant et enrichit son profil pendant la conversation.",
+      "L'agent confirme qui appelle et recueille les détails utiles pendant la conversation.",
   },
 ] as const;
 
@@ -125,7 +125,7 @@ const COMPLIANCE_CARDS = [
 const INCLUDED_ITEMS = [
   { icon: Phone, label: "Numéro de téléphone dédié" },
   { icon: Mic, label: "Enregistrements d'appels" },
-  { icon: Bell, label: "Notifications email/SMS" },
+  { icon: Bell, label: "Notifications courriel / texto" },
   { icon: MessageSquare, label: "Résumés de conversation" },
   { icon: Clock, label: "Disponibilité 24/7" },
   { icon: BarChart3, label: "Tableau de bord" },
@@ -145,11 +145,11 @@ export function FonctionnalitesPage() {
                   "text-3xl md:text-hero"
                 )}
             >
-              Tout ce que fait notre agent vocal IA
+              Tout ce que notre agent vocal IA peut prendre en charge
             </h1>
             <p className="max-w-2xl text-[1.125rem] leading-[1.6] text-text-secondary">
-              Appels entrants, prise de rendez-vous, qualification de prospects,
-              intégrations — tout est inclus.
+              Appels entrants, rendez-vous, qualification, suivis et
+              intégrations : tout est pensé pour des entreprises d&apos;ici.
             </p>
           </AnimateOnScroll>
         </div>
@@ -162,7 +162,7 @@ export function FonctionnalitesPage() {
             variants={fadeInUp}
             className="font-display text-h1 font-normal text-primary leading-[1.15]"
           >
-            Appels entrants & sortants
+            Ce que l&apos;agent gère au téléphone
           </motion.h2>
 
           <StaggerContainer className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -189,7 +189,7 @@ export function FonctionnalitesPage() {
       <SectionWrapper>
         <AnimateOnScroll className="flex flex-col gap-8 lg:gap-10">
           <h2 className="font-display text-h1 font-normal text-primary leading-[1.15]">
-            S'intègre avec vos outils
+            Se branche sur vos outils
           </h2>
 
           <div className="flex flex-wrap gap-3">
@@ -204,7 +204,7 @@ export function FonctionnalitesPage() {
           </div>
 
           <p className="text-[1rem] leading-[1.5] text-text-secondary">
-            Votre outil n'est pas listé? On s'adapte. Contactez-nous.
+            Votre outil n&apos;est pas là? On s&apos;ajuste. Parlez-nous-en.
           </p>
         </AnimateOnScroll>
       </SectionWrapper>

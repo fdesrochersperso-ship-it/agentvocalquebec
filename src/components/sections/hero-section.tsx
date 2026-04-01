@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="mx-auto max-w-[1200px] px-6">
         <div className="flex max-w-3xl flex-col gap-6">
           <AnimateOnScroll delay={0}>
-            <Badge>Conçu pour les entreprises québécoises</Badge>
+            <Badge>Pensé pour les entreprises d&apos;ici</Badge>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.1}>
             <h1
@@ -20,12 +20,14 @@ export function HeroSection() {
                 "text-3xl md:text-hero"
               )}
             >
-              L'agent IA qui répond pour vous et qui parle comme quelqu'un de chez nous
+              L&apos;agent vocal IA qui répond comme du monde d&apos;ici
             </h1>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.2}>
             <p className="max-w-xl text-[1.125rem] leading-[1.6] text-text-secondary">
-              Notre agent vocal IA répond au téléphone en québécois authentique, 24 heures sur 24. Il prend les rendez-vous, répond aux questions et transfère les urgences.
+              Notre agent répond au téléphone en québécois naturel, 24/7. Il
+              prend les rendez-vous, répond aux questions qui reviennent tout
+              le temps et transfère les urgences à la bonne personne.
             </p>
           </AnimateOnScroll>
           <AnimateOnScroll delay={0.3}>
