@@ -25,11 +25,6 @@ export default function PolitiqueConfidentialitePage() {
             utilisées pour répondre aux demandes de démonstration, assurer le
             suivi commercial et améliorer l&apos;expérience offerte sur le site.
           </p>
-          <p className="text-[1rem] leading-[1.7] text-text-primary">
-            Si vous souhaitez une version juridique complète adaptée à votre
-            réalité opérationnelle, il est recommandé de faire valider ce texte
-            par un conseiller juridique avant mise en ligne définitive.
-          </p>
         </div>
       </SectionWrapper>
     </>

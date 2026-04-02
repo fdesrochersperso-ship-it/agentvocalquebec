@@ -25,11 +25,6 @@ export default function ConditionsUtilisationPage() {
             présentées à titre indicatif et de prendre contact avec l&apos;équipe
             pour valider toute portée commerciale, technique ou réglementaire.
           </p>
-          <p className="text-[1rem] leading-[1.7] text-text-primary">
-            Comme pour la politique de confidentialité, une version finale plus
-            détaillée devrait être rédigée et validée avant publication si le
-            site doit servir de référence contractuelle.
-          </p>
         </div>
       </SectionWrapper>
     </>
