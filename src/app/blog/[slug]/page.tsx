@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, CalendarDays, Clock3 } from "lucide-react";
 import { BLOG_POSTS, getBlogPostBySlug } from "@/lib/blog-posts";
-import { absoluteUrl, createPageMetadata } from "@/lib/seo";
+import { absoluteUrl, createPageMetadata } from "@/lib/metadata";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
@@ -153,11 +153,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
           <Card className="p-8 md:p-10">
             <h2 className="font-display text-h2 font-normal text-primary">
-              Transformer ce contenu en appels qualifiés
+              Voir ce que ça donnerait dans votre contexte
             </h2>
             <p className="mt-4 text-[1.05rem] leading-[1.7] text-text-secondary">
-              Le contenu attire la demande. Les pages métiers et l&apos;expérience
-              téléphonique convertissent ensuite cette demande en rendez-vous.
+              Un bon agent vocal se juge sur des appels concrets, avec vos
+              scénarios, vos règles de transfert et votre façon de parler aux
+              clients.
             </p>
             <div className="mt-6 flex flex-col gap-4 sm:flex-row">
               <Button href="/demo-gratuite" variant="primary" size="default">

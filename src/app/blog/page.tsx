@@ -1,21 +1,22 @@
 import Link from "next/link";
 import { ArrowRight, CalendarDays, Tag } from "lucide-react";
 import { BLOG_POSTS } from "@/lib/blog-posts";
-import { createPageMetadata } from "@/lib/seo";
+import { createPageMetadata } from "@/lib/metadata";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 
 export const metadata = createPageMetadata({
-  title: "Blog SEO et agent vocal IA",
+  title: "Blog sur les agents vocaux IA",
   description:
-    "Articles sur l'agent vocal IA, le SEO local et les cas d'usage par industrie pour les entreprises du Québec.",
+    "Articles pratiques sur les agents vocaux IA, la réception téléphonique automatisée et les critères à évaluer avant de choisir une solution.",
   path: "/blog",
   keywords: [
     "blog agent vocal ia",
-    "seo local québec",
+    "agent vocal ia",
     "agent téléphonique ia québec",
+    "réceptionniste ia",
   ],
 });
 
@@ -36,11 +37,12 @@ export default function BlogIndexPage() {
         <div className="mx-auto max-w-[1200px] px-6">
           <Badge className="mb-6">Blog</Badge>
           <h1 className="max-w-3xl font-display text-3xl font-normal leading-[1.1] text-primary md:text-hero">
-            Du contenu pour gagner plus d&apos;appels qualifiés au Québec
+            Des articles utiles pour choisir un agent vocal IA sans vous faire vendre du rêve
           </h1>
           <p className="mt-6 max-w-2xl text-[1.125rem] leading-[1.6] text-text-secondary">
-            Guides pratiques, angles SEO locaux et cas d&apos;usage métier pour
-            faire grandir la visibilité d&apos;un agent vocal IA au Québec.
+            On y parle de téléphone, d&apos;automatisation, de réception, de
+            transfert d&apos;appels et de ce qui compte vraiment quand vient le
+            temps d&apos;implanter un agent vocal IA dans une entreprise.
           </p>
         </div>
       </section>
@@ -101,8 +103,8 @@ export default function BlogIndexPage() {
               Tous les articles
             </h2>
             <p className="mt-4 text-[1.05rem] leading-[1.6] text-text-secondary">
-              Chaque article est pensé pour renforcer le cluster sémantique du
-              site et soutenir une page transactionnelle.
+              Des guides pensés pour répondre aux vraies questions qu&apos;une
+              entreprise se pose avant de mettre un agent vocal IA en place.
             </p>
           </div>
 
@@ -149,12 +151,11 @@ export default function BlogIndexPage() {
       <SectionWrapper>
         <div className="rounded-2xl border border-border bg-surface px-8 py-10 text-center">
           <h2 className="font-display text-h2 font-normal text-primary">
-            Besoin d&apos;un angle SEO spécifique?
+            Vous voulez voir comment ça s&apos;appliquerait chez vous?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[1.05rem] leading-[1.6] text-text-secondary">
-            Le blog est prêt pour accueillir de nouveaux articles. Chaque nouveau
-            contenu peut pousser une industrie, un cas d&apos;usage ou une objection
-            commerciale précise.
+            La meilleure façon de juger un agent vocal, c&apos;est encore de
+            l&apos;entendre sur des scénarios proches de votre réalité.
           </p>
           <div className="mt-6">
             <Button href="/demo-gratuite" variant="primary" size="default">

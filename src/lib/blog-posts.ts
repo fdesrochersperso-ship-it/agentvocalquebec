@@ -19,189 +19,257 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    slug: "agent-vocal-ia-quebec-guide",
-    title: "Agent vocal IA au Québec : comment choisir une solution qui convertit vraiment",
+    slug: "7-raisons-adopter-agent-vocal-ia",
+    title: "7 raisons d'adopter un agent vocal IA dans une entreprise de services",
     description:
-      "Guide pratique pour choisir un agent vocal IA au Québec sans sacrifier la qualité des appels, la conformité locale ni la conversion.",
+      "Les meilleures raisons d'adopter un agent vocal IA pour répondre au téléphone, réduire les appels manqués et convertir plus de demandes.",
     excerpt:
-      "Les appels manqués coûtent cher, mais toutes les solutions d'agent vocal IA ne se valent pas. Voici les critères qui comptent vraiment pour une entreprise québécoise.",
+      "Un agent vocal IA ne sert pas seulement à répondre plus vite. Il sert à arrêter de perdre des appels utiles, à mieux qualifier les demandes et à garder votre équipe concentrée sur son vrai travail.",
     publishedAt: "2026-04-01",
     readingTime: "7 min",
-    tags: ["Agent vocal IA", "Québec", "SEO local"],
+    tags: ["Agent vocal IA", "Téléphone", "Entreprise de services"],
     keywords: [
-      "agent vocal ia québec",
-      "agent téléphonique ia québec",
-      "réponse téléphonique ia québec",
+      "agent vocal ia",
+      "pourquoi adopter un agent vocal ia",
+      "agent téléphonique ia entreprise",
     ],
     sections: [
       {
-        heading: "Pourquoi la requête est stratégique",
+        heading: "1. Arrêter de perdre des appels simplement parce que personne ne peut répondre",
         paragraphs: [
-          "La requête « agent vocal IA Québec » traduit une intention très commerciale. La personne cherche déjà une solution locale, pas seulement de l'information sur l'intelligence artificielle.",
-          "Pour capter cette demande, il faut parler de résultats d'affaires, d'expérience d'appel et de réalité québécoise. Un site trop générique perdra la confiance avant même la démo.",
-        ],
-        bullets: [
-          "Mentionner clairement le Québec et le français d'ici.",
-          "Montrer des cas d'usage concrets: rendez-vous, urgences, qualification, transferts.",
-          "Rassurer sur la conformité, l'hébergement et l'intégration aux outils existants.",
+          "Dans une entreprise de services, le téléphone sonne rarement au bon moment. Le personnel est déjà occupé avec un client, sur la route, en traitement ou en intervention. Pourtant, la personne qui appelle s'attend à une réponse immédiate.",
+          "Un agent vocal IA règle d'abord ce problème très concret. Il décroche tout de suite, capte la demande et évite qu'un appel chaud se transforme en client perdu.",
         ],
       },
       {
-        heading: "Les critères qui font la différence",
+        heading: "2. Offrir une disponibilité réelle en dehors des heures d'ouverture",
         paragraphs: [
-          "Un bon agent vocal doit répondre vite, gérer plusieurs appels à la fois et transmettre une information exploitable à l'équipe. Si la solution est impressionnante en démo mais faible sur les scénarios réels, elle ne règlera pas le vrai problème.",
-          "Les entreprises québécoises veulent aussi un ton crédible. Une voix artificielle ou trop neutre peut nuire aux conversions dans les secteurs sensibles comme la santé, les services à domicile ou les urgences.",
-        ],
-        bullets: [
-          "Temps de réponse et stabilité des appels.",
-          "Qualité linguistique en français du Québec.",
-          "Scénarios d'urgence et règles de transfert.",
-          "Intégration calendrier, CRM ou logiciel métier.",
+          "Beaucoup d'appels entrent le soir, la fin de semaine ou entre deux quarts. Une boîte vocale n'aide pas vraiment: elle crée de l'attente et une partie des appelants ne laissera jamais de message.",
+          "Avec un agent vocal, l'entreprise reste joignable même quand le bureau est fermé. Les demandes simples peuvent être traitées immédiatement, et les cas urgents peuvent être transférés selon des règles précises.",
         ],
       },
       {
-        heading: "Comment transformer cette intention en rendez-vous",
+        heading: "3. Qualifier les demandes avant que votre équipe rappelle",
         paragraphs: [
-          "Une page de service performante doit faire comprendre très vite ce qui est pris en charge et pour qui. L'idéal est de combiner une page principale forte avec des pages verticales ciblées par industrie.",
-          "Le blog sert ensuite à soutenir le cluster sémantique autour des objections, des comparaisons et des cas d'usage. C'est ce qui crée une vraie autorité thématique au lieu d'une simple page vitrine.",
+          "Une bonne partie des appels ne devrait pas arriver brute dans la tête de votre équipe. Avant un rappel, vous voulez déjà savoir qui appelle, pour quoi, à quel moment et avec quel niveau d'urgence.",
+          "Un agent vocal IA permet de structurer la collecte d'information dès le départ. Votre rappel devient plus rapide, plus pertinent et beaucoup plus rentable.",
+        ],
+        bullets: [
+          "Nom, téléphone et disponibilité.",
+          "Type de besoin ou de service demandé.",
+          "Niveau d'urgence ou échéance.",
+          "Contexte de base utile avant de rappeler.",
+        ],
+      },
+      {
+        heading: "4. Réduire la pression sur le personnel",
+        paragraphs: [
+          "Le téléphone coupe le rythme. Dans une clinique, un garage, un cabinet ou une entreprise terrain, chaque interruption a un coût réel. Le personnel perd sa concentration et les clients déjà présents ont une moins bonne expérience.",
+          "En déléguant les appels répétitifs à un agent vocal, on ne remplace pas forcément un humain. On enlève surtout du bruit opérationnel et on redonne de l'espace à l'équipe.",
+        ],
+      },
+      {
+        heading: "5. Traiter plusieurs appels en même temps",
+        paragraphs: [
+          "Une personne au téléphone ne peut gérer qu'un appel à la fois. C'est là que les files d'attente, les boîtes vocales et les appels manqués s'accumulent.",
+          "Un agent vocal IA peut absorber plusieurs appels en parallèle. Ce point devient critique dans les secteurs où la demande arrive par vagues, comme la restauration, la santé, la plomberie ou le chauffage-climatisation.",
+        ],
+      },
+      {
+        heading: "6. Standardiser la qualité des réponses",
+        paragraphs: [
+          "Quand les réponses dépendent de qui décroche, la qualité varie. Un agent vocal bien configuré donne toujours les mêmes informations de base, avec le même ton, les mêmes règles et les mêmes réflexes de transfert.",
+          "Cette constance améliore l'expérience client et protège aussi l'entreprise contre les oublis ou les réponses improvisées.",
+        ],
+      },
+      {
+        heading: "7. Mieux convertir la demande qui existe déjà",
+        paragraphs: [
+          "Dans bien des cas, le problème n'est pas de générer plus de trafic ou plus de leads. Le problème, c'est de traiter correctement la demande qui rentre déjà au téléphone.",
+          "Un agent vocal IA devient donc un outil de conversion, pas seulement un outil d'automatisation. Il aide à transformer plus d'appels entrants en rendez-vous, en soumissions ou en ventes.",
         ],
       },
     ],
   },
   {
-    slug: "receptionniste-ia-plomberie-quebec",
-    title: "Réceptionniste IA pour plombiers au Québec : comment arrêter de perdre des urgences au téléphone",
+    slug: "quoi-regarder-avant-choisir-agent-vocal-ia",
+    title: "Quoi regarder avant de choisir un agent vocal IA",
     description:
-      "Pourquoi les entreprises de plomberie gagnent à déployer une réceptionniste IA capable de gérer les urgences, les soumissions et les prises de rendez-vous.",
+      "Les critères les plus importants pour choisir un agent vocal IA performant: qualité des appels, règles de transfert, intégrations, ton de voix et cas d'usage réels.",
     excerpt:
-      "Quand l'équipe est sur la route, chaque appel manqué peut devenir une urgence perdue. Une réceptionniste IA bien configurée règle ce problème sans ajouter une permanence complète.",
+      "Toutes les solutions d'agent vocal IA ont l'air bonnes en démonstration. Le vrai test, c'est ce qui se passe quand un client appelle avec une demande floue, urgente ou imparfaite.",
+    publishedAt: "2026-04-01",
+    readingTime: "8 min",
+    tags: ["Choix de solution", "Agent vocal IA", "Comparatif"],
+    keywords: [
+      "comment choisir un agent vocal ia",
+      "quoi regarder agent vocal ia",
+      "meilleur agent téléphonique ia",
+    ],
+    sections: [
+      {
+        heading: "Le premier critère: est-ce que la conversation sonne vrai?",
+        paragraphs: [
+          "Si la voix paraît artificielle, trop robotique ou mal adaptée à votre clientèle, l'appel peut tourner au malaise très vite. La qualité perçue de la conversation est souvent le premier facteur qui influence la confiance.",
+          "Dans un marché comme le Québec, le ton et la façon de parler comptent énormément. Une solution techniquement impressionnante mais linguistiquement maladroite risque de nuire à la conversion.",
+        ],
+      },
+      {
+        heading: "Le deuxième critère: est-ce que l'agent sait quand transférer?",
+        paragraphs: [
+          "Un agent vocal n'a pas besoin de tout gérer. Il doit surtout savoir reconnaître les cas où un humain doit prendre le relais, et le faire sans friction.",
+          "Les meilleures implantations ne cherchent pas à tout automatiser. Elles définissent clairement ce qui peut être traité automatiquement, ce qui doit être confirmé et ce qui doit être transféré.",
+        ],
+        bullets: [
+          "Urgences ou cas sensibles.",
+          "Demandes complexes ou litigieuses.",
+          "Appels VIP ou clients existants prioritaires.",
+          "Scénarios où une erreur coûterait trop cher.",
+        ],
+      },
+      {
+        heading: "Le troisième critère: les intégrations réelles",
+        paragraphs: [
+          "Si l'agent prend un rendez-vous, où va ce rendez-vous? Si un appel est qualifié, où se retrouve l'information? Si tout finit en copier-coller manuel, une partie de la valeur disparaît.",
+          "Avant de choisir une solution, il faut vérifier les intégrations utiles pour votre réalité: calendrier, CRM, logiciel métier, système de tickets ou simple résumé par texto et courriel.",
+        ],
+      },
+      {
+        heading: "Le quatrième critère: la qualité du scénario, pas juste la qualité de la voix",
+        paragraphs: [
+          "Une belle voix ne compense pas un mauvais flux de conversation. Le vrai niveau d'une solution se voit dans sa capacité à poser les bonnes questions, à relancer correctement et à finir l'appel avec une suite logique.",
+          "Un bon agent vocal doit guider la conversation sans devenir rigide. Il faut donc évaluer les cas d'usage réels, pas seulement écouter une intro réussie.",
+        ],
+      },
+      {
+        heading: "Le cinquième critère: la capacité à produire un suivi exploitable",
+        paragraphs: [
+          "À la fin de l'appel, votre équipe doit recevoir quelque chose d'utile. Pas une transcription interminable qu'on n'ouvrira jamais, mais un résumé clair qui aide à agir.",
+          "C'est ce qui transforme l'agent vocal en outil opérationnel, au lieu d'un simple gadget intéressant à écouter.",
+        ],
+      },
+      {
+        heading: "Le sixième critère: la facilité d'ajustement",
+        paragraphs: [
+          "Les entreprises changent: nouveaux services, nouvelles règles, nouvelles promotions, nouveaux cas d'escalade. Si chaque ajustement prend des semaines, la solution vieillira vite.",
+          "Une bonne implantation doit pouvoir évoluer avec vous sans devenir un projet lourd à chaque changement.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "erreurs-eviter-avec-agent-vocal-ia",
+    title: "Les erreurs à éviter avec un agent vocal IA",
+    description:
+      "Les erreurs les plus fréquentes quand une entreprise implante un agent vocal IA: vouloir tout automatiser, négliger les transferts et oublier l'expérience client.",
+    excerpt:
+      "Le problème avec un agent vocal IA n'est pas toujours la technologie. Souvent, c'est la manière dont on l'installe, ce qu'on lui demande de faire et les scénarios qu'on oublie de prévoir.",
     publishedAt: "2026-04-01",
     readingTime: "6 min",
-    tags: ["Plomberie", "Réceptionniste IA", "Services à domicile"],
+    tags: ["Implantation", "Erreurs fréquentes", "Agent vocal IA"],
     keywords: [
-      "réceptionniste ia plombier",
-      "agent téléphonique ia plomberie québec",
-      "plombier appels urgences",
+      "erreurs agent vocal ia",
+      "implanter agent vocal ia",
+      "problèmes agent téléphonique ia",
     ],
-    relatedIndustryHref: "/industries/plomberie",
     sections: [
       {
-        heading: "Le vrai coût d'un appel manqué en plomberie",
+        heading: "Erreur 1: vouloir remplacer tous les appels d'un coup",
         paragraphs: [
-          "En plomberie, l'appel arrive rarement au bon moment. L'équipe est en intervention, en déplacement ou déjà en train de gérer une urgence. Pourtant, le client s'attend à une réponse immédiate.",
-          "Si personne ne décroche, il rappelle simplement le prochain plombier. L'enjeu n'est pas seulement la productivité administrative, c'est la perte directe de contrats et d'interventions urgentes.",
+          "La meilleure façon de rater une implantation est de tout envoyer à l'agent dès le premier jour. Les entreprises qui réussissent commencent avec des scénarios précis et à forte valeur.",
+          "Quand on veut tout automatiser immédiatement, on augmente les risques d'erreur et on rend l'expérience plus fragile qu'elle devrait l'être.",
         ],
       },
       {
-        heading: "Ce qu'une réceptionniste IA doit gérer",
+        heading: "Erreur 2: ne pas définir les cas à transférer",
         paragraphs: [
-          "La solution doit distinguer une urgence réelle d'une simple demande d'information, collecter l'adresse, résumer le problème et envoyer l'alerte au bon technicien.",
-          "Elle doit aussi être capable de prendre des rendez-vous, de qualifier les demandes de soumission et de filtrer les appels non pertinents.",
+          "Un agent vocal IA sans bonnes règles de transfert devient soit trop timide, soit trop audacieux. Dans les deux cas, le client finit par vivre une mauvaise expérience.",
+          "Il faut décider noir sur blanc quels cas doivent aller à un humain, à quel moment et de quelle façon. C'est un des points les plus importants de l'implantation.",
+        ],
+      },
+      {
+        heading: "Erreur 3: configurer l'agent comme une FAQ parlante",
+        paragraphs: [
+          "Répondre à des questions fréquentes, c'est utile. Mais un agent vocal performant ne se limite pas à réciter de l'information. Il doit faire avancer l'appel vers une action utile.",
+          "Prendre un rendez-vous, qualifier une demande, rassurer, transférer, résumer: c'est là que la valeur se crée réellement.",
+        ],
+      },
+      {
+        heading: "Erreur 4: oublier le ton et le contexte local",
+        paragraphs: [
+          "Ce qui passe dans une démo générique peut très mal passer avec une vraie clientèle. Le ton, le rythme et les expressions doivent correspondre à votre marché.",
+          "Dans plusieurs secteurs, la crédibilité de l'appel compte autant que l'information transmise. Une voix mal calibrée peut annuler le gain opérationnel.",
+        ],
+      },
+      {
+        heading: "Erreur 5: ne pas mesurer ce que l'agent améliore",
+        paragraphs: [
+          "Sans mesure simple, on finit par juger l'outil au feeling. Or, les gains se voient sur des signaux très concrets: moins d'appels manqués, plus de rendez-vous, moins d'interruptions, rappels plus efficaces.",
+          "Même sans instrumentation complexe, il faut suivre quelques indicateurs pour savoir si l'agent aide vraiment.",
         ],
         bullets: [
-          "Fuites d'eau et urgences après les heures.",
-          "Demandes de soumission résidentielles et commerciales.",
-          "Prises de rendez-vous pour inspection ou réparation.",
-          "Résumés d'appels par texto ou courriel.",
-        ],
-      },
-      {
-        heading: "Pourquoi une page dédiée aide aussi votre SEO",
-        paragraphs: [
-          "Une page verticale orientée plomberie permet de répondre à des requêtes beaucoup plus proches de l'achat qu'une page « construction » trop large.",
-          "C'est aussi la meilleure façon de montrer que vos scénarios d'appel sont déjà pensés pour la réalité des plombiers québécois.",
+          "Volume d'appels pris automatiquement.",
+          "Nombre de rendez-vous ou leads captés.",
+          "Temps sauvé côté équipe.",
+          "Qualité perçue des résumés et transferts.",
         ],
       },
     ],
   },
   {
-    slug: "agent-telephonique-ia-clinique-veterinaire",
-    title: "Agent téléphonique IA pour cliniques vétérinaires : réduire l'attente sans fragiliser le triage",
+    slug: "agent-vocal-ia-ou-receptionniste",
+    title: "Agent vocal IA ou réceptionniste: comment savoir ce qu'il vous faut vraiment",
     description:
-      "Comment une clinique vétérinaire peut utiliser un agent téléphonique IA pour les appels de routine, les renouvellements et le triage de premier niveau.",
+      "Comparer un agent vocal IA et une réceptionniste pour décider quoi mettre en place selon votre volume d'appels, vos heures et votre réalité d'entreprise.",
     excerpt:
-      "Les cliniques vétérinaires vivent une pression téléphonique constante. Un agent IA bien encadré peut absorber le volume courant tout en laissant les urgences à l'équipe clinique.",
+      "Le débat n'est pas toujours « humain ou IA ». Dans beaucoup d'entreprises, la vraie question est plutôt: qu'est-ce qui mérite une présence humaine, et qu'est-ce qui devrait être absorbé automatiquement?",
     publishedAt: "2026-04-01",
-    readingTime: "6 min",
-    tags: ["Vétérinaire", "Agent téléphonique IA", "Santé"],
+    readingTime: "7 min",
+    tags: ["Réception", "Comparatif", "Agent vocal IA"],
     keywords: [
-      "agent téléphonique ia clinique vétérinaire",
-      "réceptionniste ia vétérinaire",
-      "clinique vétérinaire appels rendez-vous",
+      "agent vocal ia ou réceptionniste",
+      "réceptionniste ia vs humaine",
+      "agent téléphonique ia vs réceptionniste",
     ],
-    relatedIndustryHref: "/industries/cliniques-veterinaires",
     sections: [
       {
-        heading: "Le défi opérationnel des cliniques vétérinaires",
+        heading: "Quand une réceptionniste humaine est clairement la bonne réponse",
         paragraphs: [
-          "Les appels se ressemblent peu: rendez-vous annuels, renouvellements, suivis post-op, nourriture spécialisée, questions sur les symptômes et urgences potentielles.",
-          "Le comptoir et l'équipe vétérinaire n'ont pas besoin de plus de bruit. Ils ont besoin qu'on traite rapidement les appels répétitifs et qu'on fasse remonter les vrais cas sensibles.",
+          "Si votre volume d'appels est très élevé, très varié et demande un jugement constant, une personne dédiée à la réception reste souvent le meilleur choix. C'est particulièrement vrai quand presque chaque appel exige de la nuance ou de la coordination interne complexe.",
+          "La réception humaine est aussi plus forte lorsqu'il faut gérer une relation déjà engagée avec des clients connus, négocier ou apaiser des situations délicates en direct.",
         ],
       },
       {
-        heading: "Ce que l'IA peut prendre en charge en sécurité",
+        heading: "Quand un agent vocal IA devient plus logique",
         paragraphs: [
-          "Un agent vocal n'a pas à poser un diagnostic. Il peut toutefois faire un triage administratif, vérifier les disponibilités, rappeler la procédure de base et transférer selon vos règles.",
-          "C'est cette frontière claire entre information, logistique et jugement clinique qui rend l'automatisation utile sans devenir risquée.",
+          "Si le problème principal est le volume d'appels manqués, les appels après les heures ou les interruptions constantes, l'agent vocal IA devient très pertinent.",
+          "Il excelle surtout quand une partie importante des appels suit des scénarios répétitifs: prise de rendez-vous, qualification, demandes de base, rappels et transferts.",
+        ],
+      },
+      {
+        heading: "Le meilleur modèle est souvent hybride",
+        paragraphs: [
+          "Dans beaucoup d'entreprises, il ne s'agit pas de choisir un camp. Le meilleur montage consiste à laisser l'IA absorber le volume répétitif et à réserver l'humain aux appels à plus forte valeur relationnelle ou plus complexes.",
+          "C'est ce modèle hybride qui permet de mieux répondre sans alourdir inutilement la masse salariale ni dégrader l'expérience.",
+        ],
+      },
+      {
+        heading: "Les bonnes questions à se poser avant de trancher",
+        paragraphs: [
+          "Avant de décider, il faut regarder la nature de vos appels et non seulement le nombre d'appels. Deux entreprises recevant le même volume peuvent avoir besoin de solutions complètement différentes.",
         ],
         bullets: [
-          "Prises de rendez-vous et confirmations.",
-          "Renouvellements et demandes récurrentes.",
-          "Questions fréquentes sur les horaires et services.",
-          "Transfert prioritaire quand les critères d'urgence sont détectés.",
+          "Combien d'appels arrivent hors des heures normales?",
+          "Combien d'appels sont répétitifs ou prévisibles?",
+          "Combien d'appels exigent un jugement humain immédiat?",
+          "Quel est le coût réel d'un appel manqué dans votre activité?",
         ],
       },
       {
-        heading: "Pourquoi cette thématique mérite sa propre page",
+        heading: "La vraie question: qu'est-ce qui améliore le service sans complexifier l'opération?",
         paragraphs: [
-          "Le vocabulaire, les objections et les scénarios vétérinaires sont différents de ceux d'une clinique humaine. Une page dédiée permet d'être crédible autant pour le SEO que pour la conversion.",
-          "Elle vous donne aussi une base pour publier ensuite du contenu connexe sur le triage, les no-shows et la charge du comptoir.",
-        ],
-      },
-    ],
-  },
-  {
-    slug: "agent-vocal-hvac-quebec",
-    title: "Agent vocal IA pour chauffage et climatisation au Québec : mieux gérer les pics saisonniers",
-    description:
-      "Pourquoi les entreprises CVAC ont intérêt à déployer un agent vocal IA pour gérer les pannes, l'entretien saisonnier et les demandes de soumission.",
-    excerpt:
-      "En CVAC, la pression n'est pas constante toute l'année, mais les périodes de pointe peuvent saturer les lignes en quelques heures. C'est précisément là qu'un agent vocal IA devient rentable.",
-    publishedAt: "2026-04-01",
-    readingTime: "5 min",
-    tags: ["CVAC", "Chauffage", "Climatisation"],
-    keywords: [
-      "agent vocal ia chauffage climatisation",
-      "réceptionniste ia hvac québec",
-      "agent téléphonique cvac",
-    ],
-    relatedIndustryHref: "/industries/chauffage-climatisation",
-    sections: [
-      {
-        heading: "Les pointes saisonnières changent tout",
-        paragraphs: [
-          "Lors d'une vague de chaleur ou d'un grand froid, le nombre d'appels explose. Les équipes terrain sont déjà pleines et le bureau se retrouve à gérer une pile de demandes urgentes et non urgentes.",
-          "Le problème n'est pas seulement de répondre, c'est de prioriser correctement sans ralentir la planification.",
-        ],
-      },
-      {
-        heading: "Les scénarios à automatiser en premier",
-        paragraphs: [
-          "L'agent vocal doit séparer la panne critique d'une demande d'entretien, collecter les infos de l'équipement et proposer les créneaux pertinents selon vos règles.",
-          "Il peut aussi soutenir les campagnes d'entretien préventif et limiter le volume d'appels répétés sur les horaires ou les zones desservies.",
-        ],
-        bullets: [
-          "Pannes chauffage ou climatisation.",
-          "Prises de rendez-vous d'entretien.",
-          "Qualification de soumissions résidentielles et commerciales.",
-          "Rappels de maintenance saisonnière.",
-        ],
-      },
-      {
-        heading: "Une page dédiée renforce votre cluster local",
-        paragraphs: [
-          "Le SEO des services à domicile gagne à être très spécifique. Une page CVAC dédiée permet de capter une intention plus précise qu'une page construction ou services à domicile générale.",
-          "En complément, quelques articles ciblés permettent d'occuper davantage de terrain sur les recherches locales autour des pannes, de l'entretien et de l'urgence.",
+          "Le bon choix n'est pas celui qui paraît le plus moderne. C'est celui qui réduit la friction pour vos clients et pour votre équipe.",
+          "Si un agent vocal IA vous permet de répondre plus vite, de mieux qualifier et de transférer au bon moment, il peut devenir un très bon levier. Si vos appels demandent une intervention humaine constante, il faut le reconnaître aussi.",
         ],
       },
     ],
