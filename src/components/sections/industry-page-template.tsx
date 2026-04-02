@@ -34,6 +34,10 @@ import {
   Search,
   Car,
   UtensilsCrossed,
+  Droplets,
+  Snowflake,
+  Zap,
+  PawPrint,
   type LucideIcon,
 } from "lucide-react";
 
@@ -67,6 +71,10 @@ const ICON_MAP: Record<string, LucideIcon> = {
   Search,
   Car,
   UtensilsCrossed,
+  Droplets,
+  Snowflake,
+  Zap,
+  PawPrint,
 };
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";

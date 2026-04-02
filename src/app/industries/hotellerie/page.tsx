@@ -1,11 +1,13 @@
 import { IndustryPageTemplate } from "@/components/sections/industry-page-template";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title:
-    "Agent téléphonique IA pour hôtels hébergement | Réceptionniste IA hôtel | Agent Vocal Québec",
+    "Agent téléphonique IA pour hôtels et hébergement | Réceptionniste IA hôtel",
   description:
     "Agent vocal IA pour hôtels et hébergements au Québec. Réservations, disponibilités, check-in, conciergerie. Bilingue 24/7.",
-};
+  path: "/industries/hotellerie",
+});
 
 const PAGE_PROPS = {
   badge: "Hôtels & hébergement",

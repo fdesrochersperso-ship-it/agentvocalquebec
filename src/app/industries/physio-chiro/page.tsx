@@ -1,11 +1,13 @@
 import { IndustryPageTemplate } from "@/components/sections/industry-page-template";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title:
-    "Agent téléphonique IA pour physio chiro | Réceptionniste IA physiothérapie chiropratique | Agent Vocal Québec",
+    "Agent téléphonique IA pour physio et chiro | Réceptionniste IA physiothérapie chiropratique",
   description:
     "Agent vocal IA pour cliniques de physiothérapie et chiropratique au Québec. Rendez-vous par spécialité, assurances, rappels.",
-};
+  path: "/industries/physio-chiro",
+});
 
 const PAGE_PROPS = {
   badge: "Physio / Chiro",

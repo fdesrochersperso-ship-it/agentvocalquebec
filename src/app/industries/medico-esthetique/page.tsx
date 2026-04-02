@@ -1,11 +1,13 @@
 import { IndustryPageTemplate } from "@/components/sections/industry-page-template";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title:
-    "Agent vocal IA pour cliniques médico-esthétiques | Réceptionniste IA esthétique | Agent Vocal Québec",
+    "Agent vocal IA pour cliniques médico-esthétiques | Réceptionniste IA esthétique",
   description:
     "Agent téléphonique IA pour cliniques médico-esthétiques au Québec. Consultations Botox, laser, fillers. Prise de rendez-vous confidentielle, 24/7.",
-};
+  path: "/industries/medico-esthetique",
+});
 
 const PAGE_PROPS = {
   badge: "Médico-esthétique",

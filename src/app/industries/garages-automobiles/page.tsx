@@ -1,11 +1,13 @@
 import { IndustryPageTemplate } from "@/components/sections/industry-page-template";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title:
-    "Agent vocal IA pour garages automobiles | Réceptionniste IA garage mécanique | Agent Vocal Québec",
+    "Agent vocal IA pour garages automobiles | Réceptionniste IA garage mécanique",
   description:
     "Agent vocal IA pour garages automobiles et mécaniciens au Québec. Rendez-vous d'entretien, statut réparations, rappels de service. 24/7.",
-};
+  path: "/industries/garages-automobiles",
+});
 
 const PAGE_PROPS = {
   badge: "Garages automobiles",

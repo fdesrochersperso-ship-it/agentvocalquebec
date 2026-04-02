@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { DemoForm } from "@/components/sections/demo-form";
 import { TrackedEmailLink } from "@/components/ui/tracked-email-link";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Démo gratuite",
   description:
     "Obtenez une démo gratuite de 15 minutes : voix québécoise, tableau de bord et réponses à vos questions. Sans engagement. On vous rappelle d'ici 24 h.",
-};
+  path: "/demo-gratuite",
+});
 
 export default function DemoPage() {
   return (

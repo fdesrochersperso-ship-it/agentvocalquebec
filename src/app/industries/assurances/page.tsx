@@ -1,11 +1,13 @@
 import { IndustryPageTemplate } from "@/components/sections/industry-page-template";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title:
-    "Agent téléphonique IA pour courtiers en assurance | Réceptionniste IA assurances | Agent Vocal Québec",
+    "Agent téléphonique IA pour courtiers en assurance | Réceptionniste IA assurances",
   description:
     "Agent téléphonique IA pour courtiers et cabinets d'assurance au Québec. Soumissions, réclamations, renouvellements automatisés.",
-};
+  path: "/industries/assurances",
+});
 
 const PAGE_PROPS = {
   badge: "Assurances",

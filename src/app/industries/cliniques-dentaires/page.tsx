@@ -1,11 +1,13 @@
 import { IndustryPageTemplate } from "@/components/sections/industry-page-template";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title:
-    "Agent téléphonique IA pour cliniques dentaires | Réceptionniste IA dentaire | Agent Vocal Québec",
+    "Agent téléphonique IA pour cliniques dentaires | Réceptionniste IA dentaire",
   description:
     "Agent vocal IA spécialisé pour les cliniques dentaires du Québec. Prise de rendez-vous automatique, questions d'assurance, rappels. En québécois authentique, 24/7.",
-};
+  path: "/industries/cliniques-dentaires",
+});
 
 const PAGE_PROPS = {
   badge: "Cliniques dentaires",

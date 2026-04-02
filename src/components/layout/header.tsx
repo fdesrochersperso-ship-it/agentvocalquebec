@@ -5,17 +5,12 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { trackDemoCtaClick } from "@/lib/analytics";
+import { HEADER_INDUSTRY_LINKS } from "@/lib/site-data";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const INDUSTRIES_LINKS = [
-  { href: "/industries/cliniques-dentaires", label: "Cliniques dentaires" },
-  { href: "/industries/medico-esthetique", label: "Médico-esthétique" },
-  { href: "/industries/construction", label: "Construction & métiers" },
-  { href: "/industries/garages-automobiles", label: "Garages automobiles" },
-] as const;
-
 const DESKTOP_NAV_LINKS = [
+  { href: "/blog", label: "Blog" },
   { href: "/demo-gratuite", label: "Se faire rappeler" },
   { href: "/faq", label: "FAQ" },
 ] as const;
@@ -133,7 +128,7 @@ export function Header() {
                   className="absolute left-0 top-full pt-2"
                 >
                   <div className="min-w-[220px] rounded-lg border border-border bg-surface py-2 shadow-md">
-                    {INDUSTRIES_LINKS.map((link) => (
+                    {HEADER_INDUSTRY_LINKS.map((link) => (
                       <Link
                         key={link.href}
                         href={link.href}
@@ -237,7 +232,7 @@ export function Header() {
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden"
                       >
-                        {INDUSTRIES_LINKS.map((link) => (
+                        {HEADER_INDUSTRY_LINKS.map((link) => (
                           <Link
                             key={link.href}
                             href={link.href}
@@ -260,6 +255,13 @@ export function Header() {
                   </AnimatePresence>
                 </div>
 
+                <Link
+                  href="/blog"
+                  onClick={closeMobileMenu}
+                  className="flex min-h-[44px] items-center border-t border-border px-6 py-3 text-base font-medium text-primary hover:bg-primary/5"
+                >
+                  Blog
+                </Link>
                 <Link
                   href="/demo-gratuite"
                   onClick={() => {

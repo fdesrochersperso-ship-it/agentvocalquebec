@@ -2,7 +2,13 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Stethoscope, Sparkles, HardHat, Car, ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  Droplets,
+  PawPrint,
+  Sparkles,
+  Stethoscope,
+} from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
@@ -26,20 +32,20 @@ const INDUSTRIES = [
     href: "/industries/medico-esthetique",
   },
   {
-    icon: HardHat,
-    title: "Construction & métiers",
+    icon: Droplets,
+    title: "Plomberie",
     description:
-      "Dispatch d'urgence, prise de soumissions, filtrage d'appels — pendant que vous êtes sur le chantier.",
-    badges: ["77% pénurie", "0 appel manqué"],
-    href: "/industries/construction",
+      "Urgences, rendez-vous et soumissions pendant que l'équipe est en intervention.",
+    badges: ["Urgences 24/7", "Soumissions mieux captées"],
+    href: "/industries/plomberie",
   },
   {
-    icon: Car,
-    title: "Garages automobiles",
+    icon: PawPrint,
+    title: "Cliniques vétérinaires",
     description:
-      "Prise de rendez-vous, rappels de service et gestion des urgences routières.",
-    badges: ["50% + de RDV", "0 attente"],
-    href: "/industries/garages-automobiles",
+      "Rendez-vous, triage de premier niveau et suivis sans saturer le comptoir.",
+    badges: ["Moins d'attente", "Triage plus clair"],
+    href: "/industries/cliniques-veterinaires",
   },
 ] as const;
 

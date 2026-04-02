@@ -6,6 +6,7 @@ import {
   JetBrains_Mono,
 } from "next/font/google";
 import { SiteChrome } from "@/components/layout/site-chrome";
+import { SITE_URL } from "@/lib/site-data";
 import "./globals.css";
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -28,13 +29,14 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://agentvocalquebec.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Agent Vocal Québec — Agent vocal IA en québécois authentique",
+    default: "Agent vocal IA pour entreprises québécoises",
     template: "%s | Agent Vocal Québec",
   },
   description:
     "Agent vocal IA qui répond au téléphone en québécois naturel, 24/7. Rendez-vous, questions fréquentes et transfert d'urgences pour les entreprises du Québec.",
+  applicationName: "Agent Vocal Québec",
   openGraph: {
     locale: "fr_CA",
   },

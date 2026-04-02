@@ -1,11 +1,13 @@
 import { IndustryPageTemplate } from "@/components/sections/industry-page-template";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title:
-    "Agent téléphonique IA pour cabinets d'avocats | Réceptionniste IA juridique avocat | Agent Vocal Québec",
+    "Agent téléphonique IA pour cabinets d'avocats | Réceptionniste IA juridique avocat",
   description:
     "Agent téléphonique IA pour cabinets juridiques au Québec. Consultations, filtrage de dossiers, confidentialité totale.",
-};
+  path: "/industries/services-juridiques",
+});
 
 const PAGE_PROPS = {
   badge: "Services juridiques",

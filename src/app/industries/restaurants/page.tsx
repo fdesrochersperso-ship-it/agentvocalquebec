@@ -1,11 +1,13 @@
 import { IndustryPageTemplate } from "@/components/sections/industry-page-template";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title:
-    "Agent téléphonique IA pour restaurants | Réceptionniste IA restauration | Agent Vocal Québec",
+    "Agent téléphonique IA pour restaurants | Réceptionniste IA restauration",
   description:
     "Agent vocal IA pour restaurants au Québec. Réservations, commandes, heures d'ouverture, allergènes. Zéro appel manqué aux heures de pointe.",
-};
+  path: "/industries/restaurants",
+});
 
 const PAGE_PROPS = {
   badge: "Restaurants",

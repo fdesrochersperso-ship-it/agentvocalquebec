@@ -7,6 +7,7 @@ import { TrackedEmailLink } from "@/components/ui/tracked-email-link";
 
 const NAV_LINKS = [
   { href: "/", label: "Accueil" },
+  { href: "/blog", label: "Blog" },
   { href: "/industries", label: "Industries" },
   { href: "/fonctionnalites", label: "Fonctionnalités" },
   { href: "/demo-gratuite", label: "Se faire rappeler" },

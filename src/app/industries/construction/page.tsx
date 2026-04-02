@@ -1,11 +1,13 @@
 import { IndustryPageTemplate } from "@/components/sections/industry-page-template";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title:
-    "Agent téléphonique IA pour construction | Réceptionniste IA plombier électricien HVAC | Agent Vocal Québec",
+    "Agent téléphonique IA pour construction et métiers",
   description:
     "Agent vocal IA pour plombiers, électriciens, entrepreneurs en construction au Québec. Dispatch d'urgence, prise de soumissions, filtrage d'appels. Zéro appel manqué.",
-};
+  path: "/industries/construction",
+});
 
 const PAGE_PROPS = {
   badge: "Construction & métiers",

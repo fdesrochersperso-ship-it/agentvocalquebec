@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import {
   CheckCircle2,
   MessagesSquare,
@@ -8,6 +7,7 @@ import {
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { PrivateRetellDemo } from "@/components/sections/private-retell-demo";
+import { createPageMetadata } from "@/lib/seo";
 
 const highlightPoints = [
   "Réponse immédiate, sans attente ni boîte vocale.",
@@ -21,23 +21,13 @@ const outcomeStats = [
   { value: "Transcription", label: "suivi en direct" },
 ] as const;
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Démo interactive",
   description:
     "Démo interactive d'un agent vocal IA : accueil d'appels, qualification et réponses naturelles en français du Québec.",
-  robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-    googleBot: {
-      index: false,
-      follow: false,
-      noimageindex: true,
-      "max-image-preview": "none",
-      "max-snippet": -1,
-    },
-  },
-};
+  path: "/demo",
+  noIndex: true,
+});
 
 export default function DemoPage() {
   return (

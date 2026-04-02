@@ -1,11 +1,13 @@
 import { IndustryPageTemplate } from "@/components/sections/industry-page-template";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title:
-    "Agent téléphonique IA pour professionnels | Réceptionniste IA comptable consultant | Agent Vocal Québec",
+    "Agent téléphonique IA pour professionnels | Réceptionniste IA comptable consultant",
   description:
     "Agent vocal IA pour comptables, consultants et professionnels au Québec. Filtrage d'appels, prise de rendez-vous, gestion d'agenda.",
-};
+  path: "/industries/services-professionnels",
+});
 
 const PAGE_PROPS = {
   badge: "Services professionnels",

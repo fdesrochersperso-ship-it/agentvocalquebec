@@ -1,11 +1,13 @@
 import { PageHero } from "@/components/sections/page-hero";
 import { FaqPageContent } from "@/components/sections/faq-page-content";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "FAQ | Agent Vocal Québec",
+export const metadata = createPageMetadata({
+  title: "FAQ",
   description:
     "Questions fréquentes sur notre agent vocal IA. Fonctionnement, données, intégrations et modalités.",
-};
+  path: "/faq",
+});
 
 export default function FaqPage() {
   return (

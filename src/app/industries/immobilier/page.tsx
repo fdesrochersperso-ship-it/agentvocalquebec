@@ -1,11 +1,13 @@
 import { IndustryPageTemplate } from "@/components/sections/industry-page-template";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title:
-    "Agent téléphonique IA pour agences immobilières | Réceptionniste IA immobilier courtier | Agent Vocal Québec",
+    "Agent téléphonique IA pour agences immobilières | Réceptionniste IA immobilier courtier",
   description:
     "Agent téléphonique IA pour courtiers immobiliers au Québec. Demandes de visites, qualification acheteurs, infos propriétés. 24/7.",
-};
+  path: "/industries/immobilier",
+});
 
 const PAGE_PROPS = {
   badge: "Immobilier",

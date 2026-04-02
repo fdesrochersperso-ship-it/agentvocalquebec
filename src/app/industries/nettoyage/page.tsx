@@ -1,11 +1,13 @@
 import { IndustryPageTemplate } from "@/components/sections/industry-page-template";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title:
-    "Agent téléphonique IA pour nettoyage entretien | Réceptionniste IA entreprise ménage | Agent Vocal Québec",
+    "Agent téléphonique IA pour nettoyage et entretien | Réceptionniste IA entreprise de ménage",
   description:
     "Agent vocal IA pour entreprises de nettoyage et entretien au Québec. Soumissions, planification, urgences. Zéro appel manqué.",
-};
+  path: "/industries/nettoyage",
+});
 
 const PAGE_PROPS = {
   badge: "Nettoyage & entretien",

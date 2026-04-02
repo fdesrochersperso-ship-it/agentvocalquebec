@@ -6,6 +6,10 @@ import {
   Stethoscope,
   Sparkles,
   HardHat,
+  Droplets,
+  Snowflake,
+  PawPrint,
+  Zap,
   Car,
   UtensilsCrossed,
   Shield,
@@ -19,103 +23,43 @@ import {
   ArrowRight,
   Check,
 } from "lucide-react";
+import { FEATURED_INDUSTRIES, INDUSTRY_DIRECTORY } from "@/lib/site-data";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { StaggerContainer, fadeInUp } from "@/components/ui/stagger-container";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
-const FEATURED_INDUSTRIES = [
-  {
-    icon: Stethoscope,
-    title: "Cliniques dentaires",
-    description:
-      "Prise de rendez-vous, triage téléphonique et rappels patients 24/7, branchés sur vos outils de clinique.",
-    badges: ["35% moins d'appels manqués", "500$+ sauvés par appel"],
-    href: "/industries/cliniques-dentaires",
-  },
-  {
-    icon: Sparkles,
-    title: "Médico-esthétique",
-    description:
-      "Consultations, questions sur les traitements, suivis. Le tout avec le bon niveau de discrétion.",
-    badges: ["2 000$+ par rendez-vous", "Zéro concurrence IA au QC"],
-    href: "/industries/medico-esthetique",
-  },
-  {
-    icon: HardHat,
-    title: "Construction & métiers",
-    description:
-      "Dispatch d'urgence, soumissions et filtrage d'appels pendant que vous êtes sur le chantier.",
-    badges: ["77% pénurie main-d'œuvre", "126 000$ perdus/an en appels manqués"],
-    href: "/industries/construction",
-  },
-  {
-    icon: Car,
-    title: "Garages automobiles",
-    description:
-      "Rendez-vous d'entretien, statut des réparations et rappels de service pendant que l'atelier roule.",
-    badges: ["50% plus de rendez-vous", "Zéro attente téléphonique"],
-    href: "/industries/garages-automobiles",
-  },
-] as const;
+const ICON_MAP = {
+  Activity,
+  Briefcase,
+  Car,
+  Droplets,
+  HardHat,
+  Home,
+  Hotel,
+  PawPrint,
+  Scale,
+  Scissors,
+  Shield,
+  Snowflake,
+  Sparkles,
+  SprayCan,
+  Stethoscope,
+  UtensilsCrossed,
+  Zap,
+} as const;
 
-const ALL_INDUSTRIES = [
-  {
-    icon: UtensilsCrossed,
-    title: "Restaurants",
-    description: "Réservations, commandes pour emporter, horaires.",
-    href: "/industries/restaurants",
-  },
-  {
-    icon: Shield,
-    title: "Assurances",
-    description: "Sinistres, infos de base et prise de rendez-vous.",
-    href: "/industries/assurances",
-  },
-  {
-    icon: Briefcase,
-    title: "Services professionnels",
-    description: "Comptables, avocats, consultants.",
-    href: "/industries/services-professionnels",
-  },
-  {
-    icon: Home,
-    title: "Immobilier",
-    description: "Visites, infos sur les propriétés, prise de rendez-vous.",
-    href: "/industries/immobilier",
-  },
-  {
-    icon: Scissors,
-    title: "Salons & beauté",
-    description: "Coiffure, esthétique, barbier.",
-    href: "/industries/salons-beaute",
-  },
-  {
-    icon: Scale,
-    title: "Services juridiques",
-    description: "Consultations, prises de rendez-vous.",
-    href: "/industries/services-juridiques",
-  },
-  {
-    icon: Activity,
-    title: "Physio / Chiro",
-    description: "Prise de rendez-vous par spécialité.",
-    href: "/industries/physio-chiro",
-  },
-  {
-    icon: Hotel,
-    title: "Hôtels & hébergement",
-    description: "Réservations, disponibilités, questions des clients.",
-    href: "/industries/hotellerie",
-  },
-  {
-    icon: SprayCan,
-    title: "Nettoyage & entretien",
-    description: "Devis, planification, suivi.",
-    href: "/industries/nettoyage",
-  },
-] as const;
+const FEATURED_BADGES: Record<string, string[]> = {
+  "/industries/chauffage-climatisation": ["Pics saisonniers", "Interventions urgentes"],
+  "/industries/cliniques-dentaires": ["35% moins d'appels manqués", "500$+ sauvés par appel"],
+  "/industries/cliniques-veterinaires": ["Moins d'attente au comptoir", "Triage plus clair"],
+  "/industries/construction": ["77% pénurie main-d'œuvre", "Soumissions mieux captées"],
+  "/industries/medico-esthetique": ["2 000$+ par rendez-vous", "Discrétion"],
+  "/industries/plomberie": ["Urgences 24/7", "Plus de contrats captés"],
+};
+
+const ALL_INDUSTRIES = INDUSTRY_DIRECTORY.filter((industry) => !industry.featured);
 
 export function IndustriesHubPage() {
   return (
@@ -147,8 +91,11 @@ export function IndustriesHubPage() {
             Industries en vedette
           </motion.h2>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {FEATURED_INDUSTRIES.map((industry) => (
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {FEATURED_INDUSTRIES.map((industry) => {
+              const Icon = ICON_MAP[industry.icon as keyof typeof ICON_MAP];
+
+              return (
               <motion.div
                 key={industry.href}
                 variants={fadeInUp}
@@ -157,16 +104,16 @@ export function IndustriesHubPage() {
                 <Link href={industry.href} className="group block h-full">
                   <div className="flex h-full flex-col rounded-xl border border-border bg-surface p-8 transition-shadow duration-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)]">
                     <div className="mb-4 text-accent">
-                      <industry.icon size={32} strokeWidth={1.5} aria-hidden />
+                      <Icon size={32} strokeWidth={1.5} aria-hidden />
                     </div>
                     <h3 className="font-body text-xl font-bold text-primary">
-                      {industry.title}
+                      {industry.label}
                     </h3>
                     <p className="mt-3 flex-1 text-[1rem] leading-[1.5] text-text-secondary">
                       {industry.description}
                     </p>
                     <div className="mt-4 flex flex-wrap gap-2">
-                      {industry.badges.map((badge) => (
+                      {FEATURED_BADGES[industry.href]?.map((badge) => (
                         <span
                           key={badge}
                           className="inline-flex items-center gap-1.5 rounded-full bg-success/10 px-3 py-1 font-body text-sm font-medium text-success"
@@ -188,7 +135,8 @@ export function IndustriesHubPage() {
                   </div>
                 </Link>
               </motion.div>
-            ))}
+            );
+            })}
           </div>
         </StaggerContainer>
       </SectionWrapper>
@@ -206,17 +154,20 @@ export function IndustriesHubPage() {
           </motion.div>
 
           <StaggerContainer className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {ALL_INDUSTRIES.map((industry) => (
+            {ALL_INDUSTRIES.map((industry) => {
+              const Icon = ICON_MAP[industry.icon as keyof typeof ICON_MAP];
+
+              return (
               <motion.div key={industry.href} variants={fadeInUp}>
                 <Link
                   href={industry.href}
                   className="group flex h-full min-h-[120px] flex-col rounded-xl border border-border bg-surface p-6 transition-shadow duration-300 hover:shadow-[0_4px_12px_rgba(0,0,0,0.08)]"
                 >
                   <div className="mb-3 text-accent">
-                    <industry.icon size={24} strokeWidth={1.5} aria-hidden />
+                    <Icon size={24} strokeWidth={1.5} aria-hidden />
                   </div>
                   <h3 className="font-body text-lg font-bold text-primary">
-                    {industry.title}
+                    {industry.label}
                   </h3>
                   <p className="mt-1 flex-1 text-sm leading-[1.5] text-text-secondary">
                     {industry.description}
@@ -232,7 +183,8 @@ export function IndustriesHubPage() {
                   </span>
                 </Link>
               </motion.div>
-            ))}
+            );
+            })}
           </StaggerContainer>
         </StaggerContainer>
       </SectionWrapper>

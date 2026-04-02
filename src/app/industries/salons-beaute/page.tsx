@@ -1,11 +1,13 @@
 import { IndustryPageTemplate } from "@/components/sections/industry-page-template";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata = {
+export const metadata = createPageMetadata({
   title:
-    "Agent téléphonique IA pour salons de beauté spa | Réceptionniste IA salon coiffure | Agent Vocal Québec",
+    "Agent téléphonique IA pour salons de beauté et spas | Réceptionniste IA salon coiffure",
   description:
     "Agent vocal IA pour salons de beauté, coiffure et spas au Québec. Réservations, services, annulations. Moins de no-shows.",
-};
+  path: "/industries/salons-beaute",
+});
 
 const PAGE_PROPS = {
   badge: "Salons & beauté",
