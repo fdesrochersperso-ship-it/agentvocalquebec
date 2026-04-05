@@ -120,6 +120,100 @@ const DEFAULT_SECTION_TITLES = {
   calculatorCtaText: "Arrêtez d'en laisser passer",
 } as const;
 
+const INDUSTRY_HERO_BACKGROUNDS: Record<
+  string,
+  { src: string; position: string }
+> = {
+  "Cliniques dentaires": {
+    src: "/industry-heroes/dental.jpg",
+    position: "center right",
+  },
+  "Cliniques vétérinaires": {
+    src: "/industry-heroes/veterinary.jpg",
+    position: "center center",
+  },
+  "Physio / Chiro": {
+    src: "/industry-heroes/dental.jpg",
+    position: "center center",
+  },
+  "Médico-esthétique": {
+    src: "/industry-heroes/beauty.jpg",
+    position: "center center",
+  },
+  "Salons & beauté": {
+    src: "/industry-heroes/beauty.jpg",
+    position: "center center",
+  },
+  Restaurants: {
+    src: "/industry-heroes/restaurant.jpg",
+    position: "center center",
+  },
+  "Hôtels & hébergement": {
+    src: "/industry-heroes/hospitality.jpg",
+    position: "center center",
+  },
+  Construction: {
+    src: "/industry-heroes/trades.jpg",
+    position: "center center",
+  },
+  Plomberie: {
+    src: "/industry-heroes/trades.jpg",
+    position: "center center",
+  },
+  "Chauffage & climatisation": {
+    src: "/industry-heroes/trades.jpg",
+    position: "center center",
+  },
+  "Électriciens": {
+    src: "/industry-heroes/trades.jpg",
+    position: "center center",
+  },
+  "Nettoyage & entretien": {
+    src: "/industry-heroes/trades.jpg",
+    position: "center center",
+  },
+  Extermination: {
+    src: "/industry-heroes/trades.jpg",
+    position: "center center",
+  },
+  Toiture: {
+    src: "/industry-heroes/trades.jpg",
+    position: "center center",
+  },
+  Serrurerie: {
+    src: "/industry-heroes/trades.jpg",
+    position: "center center",
+  },
+  Paysagement: {
+    src: "/industry-heroes/trades.jpg",
+    position: "center center",
+  },
+  "Déménagement": {
+    src: "/industry-heroes/trades.jpg",
+    position: "center center",
+  },
+  "Garages automobiles": {
+    src: "/industry-heroes/trades.jpg",
+    position: "center center",
+  },
+  Assurances: {
+    src: "/industry-heroes/office.jpg",
+    position: "center center",
+  },
+  "Services professionnels": {
+    src: "/industry-heroes/office.jpg",
+    position: "center center",
+  },
+  "Services juridiques": {
+    src: "/industry-heroes/office.jpg",
+    position: "center center",
+  },
+  Immobilier: {
+    src: "/industry-heroes/office.jpg",
+    position: "center center",
+  },
+};
+
 export function IndustryPageTemplate({
   badge,
   title,
@@ -141,6 +235,10 @@ export function IndustryPageTemplate({
 }: IndustryPageProps) {
   const [calculatorValue, setCalculatorValue] = useState(10);
   const [faqOpenIndex, setFaqOpenIndex] = useState<number | null>(null);
+  const heroBackground = INDUSTRY_HERO_BACKGROUNDS[badge] ?? {
+    src: "/industry-heroes/office.jpg",
+    position: "center center",
+  };
 
   const monthlyLoss = calculatorConfig
     ? calculatorValue * calculatorConfig.valuePerCall * WEEKS_PER_MONTH
@@ -149,16 +247,34 @@ export function IndustryPageTemplate({
   return (
     <>
       {/* 1. Hero */}
-      <section className="pt-8 pb-16 lg:pt-12 lg:pb-20">
-        <div className="mx-auto max-w-[1200px] px-6">
-          <div className="flex max-w-3xl flex-col gap-6">
+      <section className="relative isolate overflow-hidden pb-10 pt-24 md:pt-28 lg:pb-14 lg:pt-32">
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-cover"
+          style={{
+            backgroundImage: `url('${heroBackground.src}')`,
+            backgroundPosition: heroBackground.position,
+          }}
+        />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-[linear-gradient(90deg,rgba(13,21,36,0.84)_0%,rgba(18,31,50,0.76)_28%,rgba(27,40,61,0.48)_52%,rgba(255,255,255,0.1)_100%)]"
+        />
+        <div
+          aria-hidden
+          className="absolute inset-x-0 top-0 h-32 bg-[linear-gradient(180deg,rgba(8,14,26,0.54)_0%,rgba(8,14,26,0.16)_60%,rgba(8,14,26,0)_100%)]"
+        />
+        <div className="relative z-10 mx-auto max-w-[1200px] px-6">
+          <div className="relative z-10 flex min-h-[430px] max-w-3xl flex-col gap-6 py-10 md:min-h-[500px] md:py-14 lg:min-h-[560px] lg:py-18">
             <AnimateOnScroll delay={0}>
-              <Badge>{badge}</Badge>
+              <Badge className="w-fit border-white/20 bg-white/10 text-white backdrop-blur-sm">
+                {badge}
+              </Badge>
             </AnimateOnScroll>
             <AnimateOnScroll delay={0.1}>
               <h1
                 className={cn(
-                  "font-display font-normal text-primary leading-[1.1]",
+                  "font-display font-normal text-white leading-[1.05]",
                   "text-3xl md:text-hero"
                 )}
               >
@@ -166,12 +282,12 @@ export function IndustryPageTemplate({
               </h1>
             </AnimateOnScroll>
             <AnimateOnScroll delay={0.2}>
-              <p className="max-w-xl text-[1.125rem] leading-[1.6] text-text-secondary">
+              <p className="max-w-2xl text-[1.125rem] leading-[1.6] text-white/88">
                 {subtitle}
               </p>
             </AnimateOnScroll>
             <AnimateOnScroll delay={0.3}>
-              <Button href="/demo-gratuite" variant="primary" size="lg">
+              <Button href="/demo-gratuite" variant="primary" size="lg" className="w-fit">
                 Réserver une démo
               </Button>
             </AnimateOnScroll>

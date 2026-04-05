@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -10,17 +11,27 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const DESKTOP_NAV_LINKS = [
+  { href: "/fonctionnalites", label: "Fonctionnalités" },
   { href: "/blog", label: "Blog" },
-  { href: "/demo-gratuite", label: "Se faire rappeler" },
+  { href: "/faq", label: "FAQ" },
+] as const;
+
+const MOBILE_NAV_LINKS = [
+  { href: "/fonctionnalites", label: "Fonctionnalités" },
+  { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
 ] as const;
 
 export function Header() {
+  const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isIndustriesExpanded, setIsIndustriesExpanded] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const hasTransparentHero =
+    pathname === "/" || pathname.startsWith("/industries/");
+  const isHomeHeroState = hasTransparentHero && !isScrolled;
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -59,42 +70,62 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-all duration-200",
-        isScrolled && "backdrop-blur-md bg-background/95 border-b border-border"
+        "top-0 z-50 w-full transition-all duration-200",
+        isHomeHeroState
+          ? "absolute left-0 bg-transparent"
+          : "sticky backdrop-blur-md bg-background/95 border-b border-border"
       )}
     >
-      <div className="mx-auto flex h-14 max-w-[1200px] items-center justify-between gap-4 px-6 md:h-16">
-        {/* Mobile: Hamburger on left */}
-        <button
-          type="button"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center md:hidden text-primary hover:text-primary-dark transition-colors touch-manipulation"
-          aria-expanded={isMenuOpen}
-          aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
-        >
-          {isMenuOpen ? (
-            <X size={24} strokeWidth={1.5} aria-hidden />
-          ) : (
-            <Menu size={24} strokeWidth={1.5} aria-hidden />
-          )}
-        </button>
+      <div className="mx-auto flex h-16 max-w-[1200px] items-center gap-4 px-4 sm:px-6">
+        <div className="flex min-w-0 items-center gap-2 md:flex-none md:gap-4">
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className={cn(
+              "flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-md transition-colors touch-manipulation md:hidden",
+              isHomeHeroState
+                ? "text-white hover:bg-white/10 hover:text-white"
+                : "text-primary hover:bg-primary/5 hover:text-primary-dark"
+            )}
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          >
+            {isMenuOpen ? (
+              <X size={24} strokeWidth={1.5} aria-hidden />
+            ) : (
+              <Menu size={24} strokeWidth={1.5} aria-hidden />
+            )}
+          </button>
 
-        {/* Logo - centered on mobile, left on desktop */}
-        <Link
-          href="/"
-          className="font-display text-xl font-normal text-primary hover:text-primary-dark transition-colors shrink-0 order-2 md:order-1"
-        >
-          Agent Vocal Québec
-        </Link>
+          <Link
+            href="/"
+            className={cn(
+              "min-w-0 shrink font-display text-[1.125rem] font-normal transition-colors sm:text-xl",
+              isHomeHeroState
+                ? "text-white hover:text-white/90"
+                : "text-primary hover:text-primary-dark"
+            )}
+          >
+            <span className="block truncate">Agent Vocal Québec</span>
+          </Link>
+        </div>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          <Link
-            href="/fonctionnalites"
-            className="text-base font-medium text-primary hover:text-primary-dark transition-colors"
-          >
-            Fonctionnalités
-          </Link>
+        <nav className="hidden flex-1 items-center justify-center gap-8 md:flex">
+          {DESKTOP_NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className={cn(
+                "text-base font-medium transition-colors",
+                isHomeHeroState
+                  ? "text-white hover:text-white/85"
+                  : "text-primary hover:text-primary-dark"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
 
           {/* Industries dropdown */}
           <div
@@ -105,7 +136,12 @@ export function Header() {
           >
             <button
               type="button"
-              className="flex items-center gap-1 text-base font-medium text-primary hover:text-primary-dark transition-colors"
+              className={cn(
+                "flex items-center gap-1 text-base font-medium transition-colors",
+                isHomeHeroState
+                  ? "text-white hover:text-white/85"
+                  : "text-primary hover:text-primary-dark"
+              )}
               aria-expanded={isIndustriesOpen}
               aria-haspopup="true"
             >
@@ -132,6 +168,7 @@ export function Header() {
                       <Link
                         key={link.href}
                         href={link.href}
+                        onClick={() => setIsIndustriesOpen(false)}
                         className="block px-4 py-2 text-sm font-medium text-primary hover:bg-primary/5 hover:text-primary-dark transition-colors"
                       >
                         {link.label}
@@ -140,6 +177,7 @@ export function Header() {
                     <div className="my-2 border-t border-border" aria-hidden />
                     <Link
                       href="/industries"
+                      onClick={() => setIsIndustriesOpen(false)}
                       className="block px-4 py-2 text-sm font-medium text-primary hover:bg-primary/5 hover:text-primary-dark transition-colors"
                     >
                       Toutes les industries
@@ -149,31 +187,29 @@ export function Header() {
               )}
             </AnimatePresence>
           </div>
-
-          {DESKTOP_NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={
-                link.href === "/demo-gratuite"
-                  ? () =>
-                      trackDemoCtaClick({
-                        ctaText: link.label,
-                        destinationPath: link.href,
-                        location: "header_nav",
-                      })
-                  : undefined
-              }
-              className="text-base font-medium text-primary hover:text-primary-dark transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
         </nav>
 
-        {/* CTA button - always visible, right side */}
-        <div className="flex shrink-0 order-3">
-          <Button href="/demo-gratuite" variant="primary" size="default">
+        <div className="ml-auto flex shrink-0 items-center gap-2">
+          <Button
+            href="/demo-gratuite"
+            variant="primary"
+            size="default"
+            className={cn(
+              "px-3.5 py-2 text-sm sm:px-4 md:hidden",
+              isHomeHeroState && "bg-white/12 text-white ring-1 ring-white/40 hover:bg-white/18"
+            )}
+          >
+            Démo
+          </Button>
+          <Button
+            href="/demo-gratuite"
+            variant="primary"
+            size="default"
+            className={cn(
+              "hidden px-5 py-2.5 text-sm md:inline-flex",
+              isHomeHeroState && "bg-white/12 text-white ring-1 ring-white/40 hover:bg-white/18"
+            )}
+          >
             Réserver une démo
           </Button>
         </div>
@@ -200,13 +236,16 @@ export function Header() {
               className="fixed left-0 top-0 z-50 h-full w-[min(320px,85vw)] overflow-y-auto border-r border-border bg-background md:hidden"
             >
               <div className="flex flex-col pt-20 pb-8">
-                <Link
-                  href="/fonctionnalites"
-                  onClick={closeMobileMenu}
-                  className="flex min-h-[44px] items-center px-6 py-3 text-base font-medium text-primary hover:bg-primary/5"
-                >
-                  Fonctionnalités
-                </Link>
+                {MOBILE_NAV_LINKS.slice(0, 1).map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMobileMenu}
+                    className="flex min-h-[44px] items-center px-6 py-3 text-base font-medium text-primary hover:bg-primary/5"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
 
                 {/* Industries accordion */}
                 <div className="border-t border-border">
@@ -255,13 +294,16 @@ export function Header() {
                   </AnimatePresence>
                 </div>
 
-                <Link
-                  href="/blog"
-                  onClick={closeMobileMenu}
-                  className="flex min-h-[44px] items-center border-t border-border px-6 py-3 text-base font-medium text-primary hover:bg-primary/5"
-                >
-                  Blog
-                </Link>
+                {MOBILE_NAV_LINKS.slice(1).map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={closeMobileMenu}
+                    className="flex min-h-[44px] items-center border-t border-border px-6 py-3 text-base font-medium text-primary hover:bg-primary/5"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
                 <Link
                   href="/demo-gratuite"
                   onClick={() => {
