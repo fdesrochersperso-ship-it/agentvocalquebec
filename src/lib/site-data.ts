@@ -74,6 +74,41 @@ export const INDUSTRY_DIRECTORY: IndustryDirectoryEntry[] = [
     navFeatured: true,
   },
   {
+    href: "/industries/toiture",
+    label: "Toiture",
+    description:
+      "Fuites, demandes de soumission et appels après intempéries pendant que l'équipe est sur les chantiers.",
+    icon: "HardHat",
+  },
+  {
+    href: "/industries/serruriers",
+    label: "Serruriers",
+    description:
+      "Lockouts, urgences et appels de service 24/7 sans laisser les clients tomber sur une boîte vocale.",
+    icon: "Shield",
+  },
+  {
+    href: "/industries/extermination",
+    label: "Extermination",
+    description:
+      "Demandes urgentes, qualification du problème et prise de rendez-vous avec le bon niveau de discrétion.",
+    icon: "SprayCan",
+  },
+  {
+    href: "/industries/paysagement",
+    label: "Paysagement",
+    description:
+      "Soumissions, entretien saisonnier et coordination des visites pour les équipes terrain.",
+    icon: "Trees",
+  },
+  {
+    href: "/industries/demenagement",
+    label: "Déménagement",
+    description:
+      "Demandes de prix, qualification des volumes et rappels organisés pendant les périodes de pointe.",
+    icon: "Truck",
+  },
+  {
     href: "/industries/garages-automobiles",
     label: "Garages automobiles",
     description:

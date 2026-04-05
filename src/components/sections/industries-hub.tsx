@@ -20,6 +20,8 @@ import {
   Activity,
   Hotel,
   SprayCan,
+  Trees,
+  Truck,
   ArrowRight,
   Check,
 } from "lucide-react";
@@ -46,6 +48,8 @@ const ICON_MAP = {
   Sparkles,
   SprayCan,
   Stethoscope,
+  Trees,
+  Truck,
   UtensilsCrossed,
   Zap,
 } as const;
