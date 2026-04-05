@@ -133,7 +133,7 @@ const INDUSTRY_HERO_BACKGROUNDS: Record<
     position: "center center",
   },
   "Physio / Chiro": {
-    src: "/industry-heroes/dental.jpg",
+    src: "/industry-heroes/physio.jpg",
     position: "center center",
   },
   "Médico-esthétique": {
@@ -153,15 +153,15 @@ const INDUSTRY_HERO_BACKGROUNDS: Record<
     position: "center center",
   },
   Construction: {
-    src: "/industry-heroes/trades.jpg",
+    src: "/industry-heroes/construction.jpg",
     position: "center center",
   },
   Plomberie: {
-    src: "/industry-heroes/trades.jpg",
+    src: "/industry-heroes/plumbing.jpg",
     position: "center center",
   },
   "Chauffage & climatisation": {
-    src: "/industry-heroes/trades.jpg",
+    src: "/industry-heroes/hvac.jpg",
     position: "center center",
   },
   "Électriciens": {
@@ -169,31 +169,31 @@ const INDUSTRY_HERO_BACKGROUNDS: Record<
     position: "center center",
   },
   "Nettoyage & entretien": {
-    src: "/industry-heroes/trades.jpg",
+    src: "/industry-heroes/cleaning.jpg",
     position: "center center",
   },
   Extermination: {
-    src: "/industry-heroes/trades.jpg",
+    src: "/industry-heroes/extermination.jpg",
     position: "center center",
   },
   Toiture: {
-    src: "/industry-heroes/trades.jpg",
+    src: "/industry-heroes/construction.jpg",
     position: "center center",
   },
   Serrurerie: {
-    src: "/industry-heroes/trades.jpg",
+    src: "/industry-heroes/locksmith.jpg",
     position: "center center",
   },
   Paysagement: {
-    src: "/industry-heroes/trades.jpg",
+    src: "/industry-heroes/landscaping.jpg",
     position: "center center",
   },
   "Déménagement": {
-    src: "/industry-heroes/trades.jpg",
+    src: "/industry-heroes/moving.jpg",
     position: "center center",
   },
   "Garages automobiles": {
-    src: "/industry-heroes/trades.jpg",
+    src: "/industry-heroes/garage.jpg",
     position: "center center",
   },
   Assurances: {
@@ -209,7 +209,7 @@ const INDUSTRY_HERO_BACKGROUNDS: Record<
     position: "center center",
   },
   Immobilier: {
-    src: "/industry-heroes/office.jpg",
+    src: "/industry-heroes/real-estate.jpg",
     position: "center center",
   },
 };
